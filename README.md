@@ -4,5 +4,5 @@ Welcome to the workshop materials page. This workshop is divided into four main 
 
 ## Table of Contents
 
-- [Part 1: Git-GitHub Connection and Basic Commands](./part1.md)
-- [Part 2: Single-branch collaborative development ](./part2.md)
+- [Part 1: Git-GitHub Connection and Basic Commands](./part-1.md)
+- [Part 2: Single-branch collaborative development ](./part-2.md)
