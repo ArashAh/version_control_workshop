@@ -1,4 +1,4 @@
-# Version Control Workshop Material
+### [Back to Table of Contents](./README.md)
 
 ## Part 2: Single-Branch Collaborative Development
 

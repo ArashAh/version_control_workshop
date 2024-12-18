@@ -1,4 +1,6 @@
-# Version Control Workshop Material
+
+
+### [Back to Table of Contents](./README.md)
 
 ## Part 1: Git-GitHub Connection and Basic Commands
 
@@ -251,6 +253,7 @@
     git log --oneline
     ```
     - Check the content of the README file, you should not see this sentence anymore: "Add another line to the README file: “Input from local repo to be reverted. The content will be gone but the commit stays in the history"
----
+
+### [Back to Table of Contents](./README.md)
 
 
