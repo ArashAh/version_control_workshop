@@ -15,3 +15,9 @@ Welcome to the workshop materials page. This workshop is divided into four main 
   - Clone / Push / Pull
   - Create and resolve a merge conflict
   - Detach your head
+- [Part 3: Multi-branch collaborative development ](./part-3.md)
+  - Create a branch
+  - Create .gitignore
+  - Untracked files in the directory
+  - Fast forward merge
+  - Conflicted merge
