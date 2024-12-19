@@ -21,3 +21,9 @@ Welcome to the workshop materials page. This workshop is divided into four main 
   - Untracked files in the directory
   - Fast forward merge
   - Conflicted merge
+- [Part 4: Multi-branch collaborative development, best practices ](./part-4.md) 
+  - Stash-checkout-checkin-pop
+  - Merge the main into your branch
+  - Pull request - after conflicts resolved
+  - Pull request - without conflicts resolved
+  - Merge to main without pull request
