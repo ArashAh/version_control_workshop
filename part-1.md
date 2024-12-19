@@ -19,30 +19,29 @@
 
 ### Introduce Yourself to Git
 
-1. **Configuring Name and Email:**
+**1. Configuring Name and Email:**
    ```bash
    git config --global user.name "<YOUR FULL NAME>"
    git config --global user.email "<YOUR EMAIL ADDRESS>"
    ```
 
-2. **Check Configuration:**
+**2. Check Configuration:**
    ```bash
    git config --global --list
    ```
 
 ### Establish the Git-GitHub Connection - Clone
 
-3. **Create a repo on GitHub** 
+**3. Create a repo on GitHub** 
+ - Create a private repo with README on GitHub and stay logged in.
 
-    Create a private repo with README on GitHub and stay logged in.
-
-4. **Copy the HTTPS link**
+**4. Copy the HTTPS link**
 
     Click on “code” and copy the “https” link.
 
 5. **Clone the repo** 
 
-    Change into a directory where you want to clone the repo and clone:
+ - Change into a directory where you want to clone the repo and clone:
    ```bash
    cd <selected directory>
    git clone <https of repo on github from step 4>
