@@ -189,6 +189,7 @@
     git log --oneline --all 
     ```
     ❓ Do you see the detached head in the log and git graph?
+    
     ❓ Can you verify if the content of the file is according to the corresponding commit? 
 
 21. **Create a Branch from the detached head state:**
@@ -197,7 +198,7 @@
     git switch -c <branch name>
     git commit -a -m "commit from the detached head state"
     ```
-   ❓ Can you imagine a scenario where this functionality can be useful? 
+    ❓ Can you imagine a scenario where this functionality can be useful? 
 22. **Switch Back to Main Branch:**
     ```bash
     git switch main 

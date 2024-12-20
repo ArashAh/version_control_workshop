@@ -128,10 +128,10 @@
 12. **Update and Commit:**
     - Open `demo.txt` and add this sentence: “Input 1 to collab-br by collaborator”
     - Add and commit:
-      ```bash
-      git add . 
-      git commit -m "Commit 1 to collab-br by collaborator"
-      ```
+    ```bash
+    git add . 
+    git commit -m "Commit 1 to collab-br by collaborator"
+    ```
 
 13. **Continue Updating:**
      - You continue your work and track your version in your branch. 
@@ -210,6 +210,7 @@
     git status
     ```
     ❓ Check if you have 1 file to add when you are in main branch. This is the same files that you added when your head was in your branch. Do you know why this end up here? 
+    
     ❓ By the way, the folder that you added as 'raw-data' does not show up here, do you know why?  
 
 21. **Merge collab-br into main:**
