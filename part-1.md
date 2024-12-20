@@ -1,12 +1,9 @@
 
-
 ### [Back to first page](./README.md)
-
 ## Part 1: Git-GitHub Connection and Basic Commands
 
 ## Table of contents
 
-- [Part 1: Git-GitHub Connection and Basic Commands](#part-1-git-github-connection-and-basic-commands)
   - [Introduce yourself to Git](#introduce-yourself-to-git)
   - [Establish the Git-GitHub connection - Clone](#establish-the-git-github-connection---clone)
   - [Commit / Push / Pull](#commit--push--pull)
