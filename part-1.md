@@ -179,6 +179,7 @@
      ```bash
     git log --oneline
     ```
+
     :question: Has you commit message been amended? 
 
 
@@ -203,6 +204,7 @@
     git log --oneline
     ```
     :question: Has the last commit disappeared? 
+
     :question: Check the content of the README file, has the content changed as a result of last operation?  
 
 24. **Commit to be reversed:**
@@ -210,7 +212,9 @@
     ```bash
     git status
     ```
+
     :question: You see uncommitted changes, can you verify what changes are to be committed? 
+
     - commit: 
     ```bash
     git commit -a -m "to be reversed both the commit and content"
@@ -229,6 +233,8 @@
     git log --oneline
     ```
     :question: Has the last commit disappeared? 
+
+
     :question: Check the content of the README file, can you explain what happened to the latest changes you committed in step 23? 
 
 26. **Commit to be reverted:**
@@ -256,7 +262,10 @@
      ```bash
     git log --oneline
     ```
+    
     :question: Has the last commit disappeared? 
+
+
     :question: Check the content of the README file, can you explain what happened to the latest changes you committed in step 25? 
   
 29. **Reflect**
