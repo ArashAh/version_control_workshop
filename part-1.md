@@ -1,53 +1,52 @@
 
 
-### [Back to Table of Contents](./README.md)
+### [Back to the first page](./README.md)
 
-## Part 1: Git-GitHub Connection and Basic Commands
+## Part 1: Git-GitHub connection and basic commands
 
-## Table of Contents
+## Table of contents
 
 - [Part 1: Git-GitHub Connection and Basic Commands](#part-1-git-github-connection-and-basic-commands)
-  - [Introduce Yourself to Git](#introduce-yourself-to-git)
-  - [Establish the Git-GitHub Connection - Clone](#establish-the-git-github-connection---clone)
-  - [Commit/Push/Pull](#commitpushpull)
-  - [Use RStudio (VS Code or Any Other Code Editor)](#use-rstudio-vs-code-or-any-other-code-editor)
-  - [Going Back to History](#going-back-to-history)
+  - [Introduce yourself to Git](#introduce-yourself-to-git)
+  - [Establish the Git-GitHub connection - Clone](#establish-the-git-github-connection---clone)
+  - [Commit / Push / Pull](#commit--push--pull)
+  - [Use RStudio VS Code or any other IDE](#use-rstudio--vs-code--any-other-ide)
+  - [Going back to history](#going-back-to-history)
 
 ---
 
 
+## Introduce yourself to Git
 
-### Introduce Yourself to Git
-
-**1. Configuring Name and Email:**
+1. **Configuring Name and Email:** 
    ```bash
    git config --global user.name "<YOUR FULL NAME>"
    git config --global user.email "<YOUR EMAIL ADDRESS>"
    ```
 
-**2. Check Configuration:**
+2. **Check Configuration:**
    ```bash
    git config --global --list
    ```
 
-### Establish the Git-GitHub Connection - Clone
+## Establish the Git-GitHub connection - Clone
 
-**3. Create a repo on GitHub** 
- - Create a private repo with README on GitHub and stay logged in.
+3. **Create a repo on GitHub** 
+   - Create a private repo with README on GitHub and stay logged in.
 
-**4. Copy the HTTPS link**
+4. **Copy the HTTPS link**
 
-    Click on “code” and copy the “https” link.
+   - Click on “code” and copy the “https” link.
 
 5. **Clone the repo** 
 
- - Change into a directory where you want to clone the repo and clone:
+   - Change into a directory where you want to clone the repo and clone:
    ```bash
    cd <selected directory>
    git clone <https of repo on github from step 4>
    ```
 
-6. **Figure Out if Authentication is Needed:**
+6. **Figure Out if authentication is needed:**
    - **Authentication exits**
      - If authentication is previously done, the cloning takes place successfully, jump to step [9](#commitpushpull)
    - **Authentication does not exist**
@@ -60,52 +59,54 @@
 
 7. **Creating a Personal Access Token (PAT)**:
 
-   On GitHub, navigate to `GitHub > Settings > Developer Settings > Personal Access Token > Generate New Token`. Select:
-   - `Repo`
-   - `Workflow`
-   - `User`
+   - On GitHub, navigate to `GitHub > Settings > Developer Settings > Personal Access Token > Generate New Token`. Select:
+     - `Repo`
+     - `Workflow`
+     - `User`
 
-    Generate a new PAT, copy, and paste it somewhere safe. You will not be able to see this after you refresh the page. 
+   - Generate a new PAT, copy, and paste it somewhere safe. You will not be able to see this after you refresh the page. 
 
-8. Use the PAT for Git Authentication:
+8. **Use the PAT for Git authentication:**
 
-   When prompted, enter your GitHub username.
+   - When prompted asking for GitHub username, enter your GitHub username.
 
-   Paste the PAT instead of your GitHub password.
+   - When prompted for GitHub password, paste the PAT instead of your GitHub password.
 
-   In this stage the repo should be cloned successfully
+   - In this stage the repo should be cloned successfully
 
-   After this step Git should remember the GitHib credentials until the PAT is expired. Otherwise read more on https://docs.github.com/en/get-started/getting-started-with-git/caching-your-github-credentials-in-git?platform=linux
+   - After this step Git should remember the GitHib credentials until the PAT is expired. Otherwise read more on https://docs.github.com/en/get-started/getting-started-with-git/caching-your-github-credentials-in-git?platform=linux
 
 
-### Commit/Push/Pull
+## Commit / Push / Pull
 
 9. **Verify the clone** 
 
-    After successful authentication, your repo should be cloned. Change into the repo directory and inspect the cloned files:
+   - After successful authentication, your repo should be cloned. 
+   - Change into the repo directory and inspect the cloned files:
     ```bash
     cd <repo-name>
     ls
     ```
 
-10. **Check the Connection Status:**
+10. **Check the connection status:**
     ```bash
     git remote show origin
     ```
 
-11. **Modify README and Sync with GitHub:**
+11. **Modify README and push back to GitHub:**
 
     - Edit README file and add: “Input from local repo to be pushed to remote repo.”
-    - Use the following commands:
-      ```bash
-      git status 
-      git add README.md
-      git status 
-      git commit -m "Testing connection"
-      git status 
-      git push origin main 
-      git status
-      ```
+    - Use the following commands to commit and push the changes to GitHub:
+
+    ```bash
+    git status 
+    git add README.md
+    git status 
+    git commit -m "Testing connection"
+    git status 
+    git push origin main 
+    git status
+    ```
 
 12. **Refresh GitHub to confirm changes.**
 
@@ -113,7 +114,7 @@
 
     - On GitHub, edit README to add: "Input from remote repo to be pulled to local repo."
     - Commit message: “Connecting from GitHub.”
-    - On the command line:
+    - Pull the changes on the command line:
     ```bash
     git status 
     git fetch origin main
@@ -127,18 +128,17 @@
     git log --oneline
     ```
 
-### Use RStudio, VS Code or Any Other Code Editor
+## Use RStudio / VS Code / any other IDE
 
 15. **Start fresh in the IDE**
 
-    Delete the local repo cloned in Step 5.
+    - Delete the local repo cloned in Step 5.
 
 16. **Clone using the IDE**
 
-    - In RStudio: Go to File > New Project > Version Control > Git, paste the repo URL and create the project.
-    - In VS Code: cnrtl+shift+p > Clone from GitHub, paste the repo URL and hit enter 
+    - In RStudio: Go to `File > New Project > Version Control > Git`, paste the repo URL, choose a directory and create the project.
+    - In VS Code: open a folder, then `ctrl+shift+p >Clone > Clone from GitHub`, paste the repo URL and hit enter 
     - Verify the clone
-
 
 17. **Edit in IDE and push changes:**
 
@@ -150,13 +150,13 @@
 
     - On GitHub, edit README to add: "Input from remote repo to be pulled to local repo using IDE."
     - Commit message: “Editing from GitHub.”
-    - Fetch and pull the latest changes from github using RStudio 
+    - Fetch and pull the latest changes from GitHub using RStudio 
 
 19. **Review commit history in IDE:**
     - In RSTudio: use git history 
     - In VS Code: use git graph 
 
-### Going Back to History
+## Going back to history
 
 20. **Commit to be amended** 
 
@@ -173,31 +173,28 @@
 
 21. **Amend a Commit:**
     ```bash
-    git commit --amend
+    git commit --amend "It is amended now"
     ```
-    - Modify the commit message to "Commit amended now" and save.
-
     - Look at the commit log 
      ```bash
     git log --oneline
     ```
+    :question: Has you commit message been amended? 
+
 
 22. **Commit to be uncommitted** 
 
-    - Add another line to README file: “Input from local repo to be commited and uncommited, the content is the same, only the commit is reversed.”
+    - Add another line to README file: “Input from local repo to be committed and uncommitted, the content is the same, only the commit is reversed.”
     - Commit with:
     ```bash
-    git commit -a -m "to be uncommited"
+    git commit -a -m "to be uncommitted"
     ```
     - Look at the commit log 
      ```bash
     git log --oneline
     ```
 
-
-
-
-22. **Uncommit a Commit:**
+23. **Un-commit a Commit:**
     ```bash
     git reset HEAD~1
     ```
@@ -205,9 +202,16 @@
      ```bash
     git log --oneline
     ```
-    - Check the content of the README file, you should still see this sentence: “Input from local repo to be commited and uncommited, the content is the same, only the commit is reversed.” 
+    :question: Has the last commit disappeared? 
+    :question: Check the content of the README file, has the content changed as a result of last operation?  
 
-23. **Commit to be reversed:**
+24. **Commit to be reversed:**
+    - Look at the Git status    
+    ```bash
+    git status
+    ```
+    :question: You see uncommitted changes, can you verify what changes are to be committed? 
+    - commit: 
     ```bash
     git commit -a -m "to be reversed both the commit and content"
     ```
@@ -216,7 +220,7 @@
     git log --oneline
     ```
 
-24. **Reverse a commit:**
+25. **Reverse a commit:**
     ```bash
     git reset --hard HEAD~1
     ```
@@ -224,9 +228,10 @@
      ```bash
     git log --oneline
     ```
-    - Check the content of the README file, you should not see this sentence anymore: “Input from local repo to be commited and uncommited, the content is the same, only the commit is reversed.” 
+    :question: Has the last commit disappeared? 
+    :question: Check the content of the README file, can you explain what happened to the latest changes you committed in step 23? 
 
-25. **Commit to be reverted:**
+26. **Commit to be reverted:**
     
     - Add another line to the README file: “Input from local repo to be reverted. The content will be gone but the commit stays in the history”
     - Commit with:
@@ -238,21 +243,24 @@
     git log --oneline
     ```
 
-26. **Revert a Commit:**
-    - Copy the commit hash of the commit you want to revert 
+27. **Revert a Commit:**
+    - Copy the commit hash of the commit you want to revert from previous step
+    - Revert by running this and pasting the commit hash: 
     ```bash
-    git log --oneline 
-    git revert <commit hash>
+        git revert <commit hash>
     ```
-    - This changes the file content to the commit before the referred commit hash but does not remove the commit, instead it makes a new commit to show the reversion
+    - This will be a new commit, save and close the commit prompt to complete the revert.
 
-33. Save and close the commit prompt to complete the revert.
+28. **Verify the revert** 
     - Look at the commit log 
      ```bash
     git log --oneline
     ```
-    - Check the content of the README file, you should not see this sentence anymore: "Add another line to the README file: “Input from local repo to be reverted. The content will be gone but the commit stays in the history"
-
-### [Back to Table of Contents](./README.md)
+    :question: Has the last commit disappeared? 
+    :question: Check the content of the README file, can you explain what happened to the latest changes you committed in step 25? 
+  
+29. **Reflect**
+    :question: Can you imagen different scenarios where "amend", "un-commit", "reverse" or "revert" cab be used? 
+### [Back to the first page](./README.md)
 
 
