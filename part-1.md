@@ -180,7 +180,7 @@
     git log --oneline
     ```
 
-    :question: Has you commit message been amended? 
+    ❓ Has you commit message been amended? 
 
 
 22. **Commit to be uncommitted** 
@@ -203,9 +203,9 @@
      ```bash
     git log --oneline
     ```
-    :question: Has the last commit disappeared? 
+    ❓ Has the last commit disappeared? 
 
-    :question: Check the content of the README file, has the content changed as a result of last operation?  
+    ❓ Check the content of the README file, has the content changed as a result of last operation?  
 
 24. **Commit to be reversed:**
     - Look at the Git status    
@@ -213,7 +213,7 @@
     git status
     ```
 
-    :question: You see uncommitted changes, can you verify what changes are to be committed? 
+    ❓ You see uncommitted changes, can you verify what changes are to be committed? 
 
     - commit: 
     ```bash
@@ -232,10 +232,10 @@
      ```bash
     git log --oneline
     ```
-    :question: Has the last commit disappeared? 
+    ❓ Has the last commit disappeared? 
 
 
-    :question: Check the content of the README file, can you explain what happened to the latest changes you committed in step 23? 
+    ❓ Check the content of the README file, can you explain what happened to the latest changes you committed in step 23? 
 
 26. **Commit to be reverted:**
     
@@ -263,14 +263,14 @@
     git log --oneline
     ```
     
-    :question: Has the last commit disappeared? 
+    ❓ Has the last commit disappeared? 
 
 
-    :question: Check the content of the README file, can you explain what happened to the latest changes you committed in step 25? 
+    ❓ Check the content of the README file, can you explain what happened to the latest changes you committed in step 25? 
   
 29. **Reflect**
 
-    :question: Can you imagen different scenarios where "amend", "un-commit", "reverse" or "revert" cab be used? 
+    ❓ Can you imagen different scenarios where "amend", "un-commit", "reverse" or "revert" cab be used? 
 
 ### [Back to first page](./README.md)
 
