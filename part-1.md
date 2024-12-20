@@ -2,7 +2,7 @@
 
 ### [Back to first page](./README.md)
 
-## Part 1: Git-GitHub connection and basic commands
+## Part 1: Git-GitHub Connection and Basic Commands
 
 ## Table of contents
 
@@ -270,7 +270,7 @@
   
 29. **Reflect**
 
-    ❓ Can you imagen different scenarios where "amend", "un-commit", "reverse" or "revert" cab be used? 
+    ❓ Can you imagine different scenarios where "amend", "un-commit", "reverse" or "revert" cab be used? 
 
 ### [Back to first page](./README.md)
 

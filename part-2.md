@@ -8,7 +8,7 @@
 - [Create a remote repository and connect](#create-a-remote-repository-and-connect)
 - [Clone / Push / Pull](#clone--push--pull)
 - [Create and resolve a merge conflict](#create-and-resolve-a-merge-conflict)
-- [Detach your head](#detach-your-head)
+- [Detach "your head"](#detach-your-head)
 
 ---
 
@@ -18,26 +18,26 @@
 
 1. **Create a local demo project:**
    - Make a directory for a demo project on your local machine and initialize a local repo:
-     ```bash
-     cd <into the folder that to place the workshop material>
-     mkdir vc-demo-local
-     cd vc-demo-local
-     git status 
-     git init 
-     git status 
-     ```
+   ```bash
+   cd <into the folder that to place the workshop material>
+   mkdir vc-demo-local
+   cd vc-demo-local
+   git status 
+   git init 
+   git status 
+   ```
 
 2. **Create `demo.txt` and make initial commit:**
    - Generate a text file and name it “demo.txt”:
-     ```bash
-     touch demo.txt 
-     ```
+   ```bash
+   touch demo.txt 
+   ```
    - Open the file in your IDE and add: “Input 1 to master branch by admin”, save the file.
    - Add and commit changes:
-     ```bash
-     git add . 
-     git commit -m "commit 1 to master by admin"
-     ```
+   ```bash
+   git add . 
+   git commit -m "commit 1 to master by admin"
+   ```
 
 ## Create a remote repository and connect
 
@@ -49,6 +49,8 @@
     ```bash
     git branch -M main
     ```
+    ❓ do you know why we need to this? 
+
 5. **Connect local to remote:**
    - Add a remote repository:
    ```bash
@@ -63,7 +65,8 @@
    git status
    git push 
    ```
-   - You see the error, we'll fix it now by setting current branch to track the main branch on the remote repo: 
+   ❓ You see the error, do you know why this happens and how to fix it? 
+   - Push with setting the upstream 
     ```Bash 
      git push -u origin main
      git status 
@@ -83,19 +86,20 @@
      git clone <https of repo on github> 
      ```
 
-9. **Edit `demo.txt` and commit:**
+9. **Edit and commit:**
    - Open `demo.txt` and add: “Input 1 to main branch by collaborator”, save the file.
    - Add and commit changes:
-     ```bash
-     git add . 
-     git commit -m "commit 1 to main by collaborator"
-     ```
+   ```bash
+   git add . 
+   git commit -m "commit 1 to main by collaborator"
+   ```
 
 10. **Push Changes to Remote:**
-   - Push changes:
+    - Push changes:
      ```bash
      git push 
      ```
+    ❓ This time with pushing you did not get the same error as the admin did, do you know why? 
 
 ### Admin
 
@@ -135,22 +139,25 @@
      git push 
      ```
      - Inspect the error 
-
-16. **Pull the diverence:**
+    
+    ❓ Do you know why you cannot push? 
+16. **Pull the divergence:**
     - Push fails, so fetch and pull changes:
-      ```bash
-      git fetch
-      git status 
-      git pull 
-      ```
+    ```bash
+    git fetch
+    git status 
+    git pull 
+    ```
+    ❓ You get a merge conflict? Do you know why? Why is it a merge?  
 
 17. **Resolve Conflict:**
-    - Resolve in RStudio or VS Code.
+    - Resolve in RStudio or VS Code. It means select which version to stay in the file and save it. 
     - Add file and commit:
-      ```bash
-      git add . 
-      git commit -m "commit 3 to main by collaborator, conflict resolved"
-      ```
+    ```bash
+    git add . 
+    git commit -m "commit 3 to main by collaborator, conflict resolved"
+    ```
+    ❓ Do you know why you needed to commit again?
 
 18. **Push Resolved Conflicts:**
     ```bash
@@ -159,36 +166,36 @@
 
 ### Admin
 
-19. **Pull Latest Version:**
-    ```bash
-    git pull
-    ```
+19. **Pull latest version:**
+     ```bash
+     git pull
+     ```
 
-## Detach Your Head
+## Detach "your head"
 
 ### Both Admin & Collaborator
 
-   - View git log:
+20. **Check Out Previous Commit:**
+    - View git log 
     ```bash
     git log --oneline
     ```
-
-20. **Check Out Previous Commit:**
-    - Switch to specific commit to explore, copy the commit hash:
-      ```bash
-      git checkout <commit hash>
-      git log --oneline --all 
-      ```
-    - Do you see the detachted head?
-
+    - Copy the hash of the commit you want to checkout 
+    - Checkout the commit and explore:
+    ```bash
+    git checkout <commit hash>
+    git log --oneline --all 
+    ```
+    ❓ Do you see the detached head in the log and git graph?
+    ❓ Can you verify if the content of the file is according to the corresponding commit? 
 
 21. **Create a Branch from the detached head state:**
     - If retaining changes, commit and create new branch:
-      ```bash
-      git switch -c <branch name>
-      git commit -a -m "commit from the detached head state"
-      ```
-
+    ```bash
+    git switch -c <branch name>
+    git commit -a -m "commit from the detached head state"
+    ```
+   ❓ Can you imagine a scenario where this functionality can be useful? 
 22. **Switch Back to Main Branch:**
     ```bash
     git switch main 
@@ -196,7 +203,7 @@
 
 23. **Return to Main without change:**
     - If you want to go back to main without any commit or change simply attach the head back and switch to main:
-      ```bash
-      git switch - 
-      ```
+    ```bash
+    git switch - 
+    ```
 ### [Back to Table of Contents](./README.md)
