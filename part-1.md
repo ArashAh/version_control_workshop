@@ -1,6 +1,6 @@
 
 
-### [Back to the first page](./README.md)
+### [Back to first page](./README.md)
 
 ## Part 1: Git-GitHub connection and basic commands
 
@@ -269,7 +269,9 @@
     :question: Check the content of the README file, can you explain what happened to the latest changes you committed in step 25? 
   
 29. **Reflect**
+
     :question: Can you imagen different scenarios where "amend", "un-commit", "reverse" or "revert" cab be used? 
-### [Back to the first page](./README.md)
+
+### [Back to first page](./README.md)
 
 
