@@ -1,4 +1,6 @@
-# Part 4: Multi-branch collaborative development, best practices
+### [Back to first page](./README.md)
+
+## Part 4: Multi-branch collaborative development, best practices
 
 ## Table of Contents
 
@@ -185,7 +187,7 @@
      ```
 
 20. **Initiate a pull request on GitHub:**
-   - Send a pull request to merge `collab-br2` into `main`.
+    - Send a pull request to merge `collab-br2` into `main`.
 
 ### Admin
 
@@ -247,7 +249,9 @@
 ## Admin
 
 28. **Resolve conflicts on GitHub:**
-    ❓ What is the difference between this and the previous pull request?
+
+     ❓ What is the difference between this and the previous pull request?
+
      - Check the pull request and follow the instructions to resolve conflict on GitHub.
 
      ❓ Do you know where you resolved the conflict?    
@@ -260,12 +264,12 @@
     ```
 
 30. **Update and commit to main:**
-   - Open `demo.txt` and add: “Input 5 to main by admin, to be ruined by collaborator without a pull request”
-   - Add and commit:
-     ```bash
-     git add . 
-     git commit -m "commit 5 to main by admin"
-     ```
+    - Open `demo.txt` and add: “Input 5 to main by admin, to be ruined by collaborator without a pull request”
+    - Add and commit:
+    ```bash
+    git add . 
+    git commit -m "commit 5 to main by admin"
+    ```
 
 31. **Push changes to remote:**
     ```bash
@@ -306,12 +310,12 @@
 
 35. **Commit and Push:**
    
-   - Add and commit:
-     ```bash
-     git add .
-     git commit -m "conflict 3 resolved in main, resulted in collapse of main"
-     ```
-   - Push final changes:
+    - Add and commit:
+    ```bash
+    git add .
+    git commit -m "conflict 3 resolved in main, resulted in collapse of main"
+    ```
+    - Push final changes:
      ```bash
      git push 
      ```
@@ -323,4 +327,4 @@
 
      ❓ Do you have any solution for fix this? 
 
-### [Back to Table of Contents](./README.md)
+### [Back to first page](./README.md)
