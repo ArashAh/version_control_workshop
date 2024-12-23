@@ -177,7 +177,7 @@
     git log --oneline
     ```
 
-    ❓ Has you commit message been amended? 
+    ❓ Has the commit message been amended? 
 
 
 22. **Commit to be uncommitted** 

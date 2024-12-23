@@ -10,7 +10,7 @@
 - [Create a remote repository and connect](#create-a-remote-repository-and-connect)
 - [Clone / Push / Pull](#clone--push--pull)
 - [Create and resolve a merge conflict](#create-and-resolve-a-merge-conflict)
-- [Detach "your head"](#detach-your-head)
+- [Detach the HEAD](#detach-the-head)
 
 ---
 
@@ -173,7 +173,7 @@
      git pull
      ```
 
-## Detach "your head"
+## Detach the HEAD
 
 ### Both Admin & Collaborator
 

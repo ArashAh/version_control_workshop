@@ -53,7 +53,8 @@
    echo "raw-data/" >> .gitignore
    git status 
    ```
-   - compare the result of git status with the one in step 3. 
+   - Compare the result of git status with the one in step 3. 
+
    ❓ Can you think of potential things to ignore in a repo? 
 
 5. **Update and commit while ignoring:**
@@ -124,6 +125,7 @@
     echo "raw-data/" >> .gitignore
     git status
     ```
+    - Compare the result of git status with the one in step 10. 
 
 12. **Update and Commit:**
     - Open `demo.txt` and add this sentence: “Input 1 to collab-br by collaborator”
@@ -138,8 +140,7 @@
      - Open `demo.txt` and add this sentence: “Input 2 to collab-br by collaborator”.
      - Add and commit in one command:
       ```bash
-      git add . 
-      git commit -m "Commit 2 to collab-br by collaborator"
+      git commit -a -m "Commit 2 to collab-br by collaborator"
       ```
       
 14. **Push Changes to Remote:**

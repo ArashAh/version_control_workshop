@@ -4,11 +4,11 @@
 
 ## Table of Contents
 
-- [Stash-checkout-checkin-pop ](#stash-checkout-checkin-pop)
-- [Merge from main](#merge-from-main)
+- [Stash-checkout-switch-pop ](#stash-checkout-switch-pop)
+- [Merge from MAIN](#merge-from-main)
 - [Pull request - after conflicts resolved](#pull-request---after-conflicts-resolved)
 - [Pull request - without conflicts resolved](#pull-request---without-conflicts-resolved)
-- [Merge to main without pull request](#merge-to-main-without-pull-request)
+- [Merge to MAIN without pull request](#merge-to-main-without-pull-request)
 
 ---
 
@@ -62,7 +62,7 @@
    git push -u origin collab-br2
    ```
 
-## Stash-checkout-checkin-pop 
+## Stash-checkout-switch-pop 
 
 ### Admin
 
@@ -116,7 +116,7 @@
     git push
     ```
 
-## Merge from main
+## Merge from MAIN
 
 ### Collaborator
 
@@ -276,7 +276,7 @@
     git push
     ```
 
-## Merge to main without pull request
+## Merge to MAIN without pull request
 
 ### Collaborator
 
