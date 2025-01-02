@@ -14,9 +14,11 @@
 
 ---
 
+## Admin
+
 ## Initiate a project from Git
 
-### Admin
+
 
 1. **Create a local demo project:**
    - Make a directory for a demo project on your local machine and initialize a local repo:
@@ -51,7 +53,7 @@
     ```bash
     git branch -M main
     ```
-    ❓ do you know why we need to this? 
+    ❓ do you know why we need to do this? 
 
 5. **Connect local to remote:**
    - Add a remote repository:
@@ -62,12 +64,13 @@
    ```
 
 6. **Push to remote and set tracking:**
-   - Push the first commit and track main branch on remote:
+   - Push the first commit:
    ```bash
    git status
    git push 
    ```
-   ❓ You see the error, do you know why this happens and how to fix it? 
+   ❓ You see an error, do you know why this happens and how to fix it? 
+   
    - Push with setting the upstream 
     ```Bash 
      git push -u origin main
@@ -78,9 +81,11 @@
 7. **Add collaborator:**
    - Go to `settings > collaborators` and add a collaborator to the project.
 
+## Collaborator
+
 ## Clone / Push / Pull
 
-### Collaborator
+
 
 8. **Clone the repo:**
    - Find the repo by the admin in your repository list and clone it:
@@ -103,7 +108,7 @@
      ```
     ❓ This time with pushing you did not get the same error as the admin did, do you know why? 
 
-### Admin
+## Admin
 
 11. **Pull Latest Changes:**
     ```bash
@@ -123,9 +128,11 @@
     git push 
     ```
 
+## Collaborator
+
 ## Create and Resolve a Merge Conflict
 
-### Collaborator
+
 
 14. **Create Conflict:**
     - Collaborator does not pull before applying changes
@@ -166,16 +173,17 @@
     git push 
     ```
 
-### Admin
+## Admin
 
 19. **Pull latest version:**
      ```bash
      git pull
      ```
 
+## Both Admin & Collaborator
+
 ## Detach the HEAD
 
-### Both Admin & Collaborator
 
 20. **Check Out Previous Commit:**
     - View git log 
