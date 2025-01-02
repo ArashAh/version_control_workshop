@@ -47,9 +47,9 @@
    - **Authentication exits**
      - If authentication is previously done, the cloning takes place successfully, jump to step [9](#commitpushpull)
    - **Authentication does not exist**
-     - If the cloning did not take place and you get authentication error follow along. 
+     - If the cloning did not take place and you get authentication error, proceed forward for different operating systems. 
    - **For Linux and Mac:**
-     - If prompted, do not enter your username and password directly; you need to create a Personal Access Token (PAT).
+     - If prompted for GitHub username and password, do not enter your username and password directly; you need to create a Personal Access Token (PAT).
 
    - **For Windows:**
      - Follow the browser login prompt to authenticate your GitHub credentials for Git. If it fails, proceed with creating a PAT.
@@ -147,7 +147,7 @@
 
     - On GitHub, edit README to add: "Input from remote repo to be pulled to local repo using IDE."
     - Commit message: “Editing from GitHub.”
-    - Fetch and pull the latest changes from GitHub using RStudio 
+    - Fetch and pull the latest changes from GitHub using the IDE 
 
 19. **Review commit history in IDE:**
     - In RSTudio: use git history 
@@ -263,7 +263,7 @@
     ❓ Has the last commit disappeared? 
 
 
-    ❓ Check the content of the README file, can you explain what happened to the latest changes you committed in step 25? 
+    ❓ Check the content of the README file, can you explain what happened to the latest changes you committed in step 26? 
   
 29. **Reflect**
 
