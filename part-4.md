@@ -61,10 +61,11 @@
    ```bash
    git push -u origin collab-br2
    ```
+## Admin 
 
 ## Stash-checkout-switch-pop 
 
-### Admin
+
 
 8. **Update but not commit:**
    
@@ -87,11 +88,11 @@
    - Stash changes and now checkout the branch:
    ```bash
    git stash 
-   git checkout origin/collab-br2
+   git checkout <commit hash>
    ```
     ❓ Take a look at the content of `demo.txt` do you see the content of the last commit by te collaborator from step 6? 
 
-10. **Retrieve stashed Work after "checkin":**
+10. **Retrieve stashed Work after switching back:**
     - Switch back to your branch:
     ```bash
     git switch - 
@@ -116,9 +117,9 @@
     git push
     ```
 
-## Merge from MAIN
+## Collaborator
 
-### Collaborator
+## Merge from MAIN
 
 13. **Update and merge main branch:**
     ```bash
@@ -159,10 +160,11 @@
     ```bash
     git push
     ```
+## Collaborator
 
 ## Pull request - after conflicts resolved
 
-### Collaborator
+
 
 18. **Merge main into branch and resolved the conflict**
     ```bash
@@ -173,7 +175,7 @@
     git switch collab-br2
     git merge main 
     ```
-    - Resolve conflicts in `demo.txt` and save the file.
+    - Resolve conflicts in `demo.txt` and save the file
    ❓ Is it a good practice to merge from main to your branch before pull request? Why?
 19. **Commit and push:**
       - Add and commit:
@@ -189,7 +191,7 @@
 20. **Initiate a pull request on GitHub:**
     - Send a pull request to merge `collab-br2` into `main`.
 
-### Admin
+## Admin
 
 21. **Review and pull request:**
     - Check pull request on GitHub.
@@ -222,9 +224,11 @@
     git push
     ```
 
+## Collaborator
+
 ## Pull request - without conflicts resolved
 
-### Collaborator
+
 
 25. **Update and commit to the branch:**
     - Make sure you are in your branch 
@@ -276,9 +280,11 @@
     git push
     ```
 
+## Collaborator
+
 ## Merge to MAIN without pull request
 
-### Collaborator
+
 
 32. **Get the latest version of main and the branch from GitHub:**
     ```bash
@@ -323,8 +329,8 @@
 
      ❓ What happened to the content that admin added in step 30? 
 
-     ❓ Is it a good practice to merge to main without pull request 
+     ❓ Is it a good practice to merge to main without pull request?
 
-     ❓ Do you have any solution for fix this? 
+     ❓ Do you have any solution for fixing this? 
 
 ### [Back to first page](./README.md)
