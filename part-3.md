@@ -12,9 +12,9 @@
 
 ---
 
-## Create a branch
+## Admin
 
-### Admin
+## Create a branch
 
 1. **Ensure latest version of remote repo:**
     
@@ -42,8 +42,6 @@
    ```
 
 ## Create .gitignore
-
-### Admin
 
 4. **Generate and update .gitignore:**
     - These files and folders you added are some experimentation and raw data and you don't need to include them in your Git history, so we want to ignore them. 
@@ -88,7 +86,7 @@
    git branch -r
    ```
 
-### Collaborator
+## Collaborator
 
 8. **Ensure latest version of remote repo:**
    ```bash
@@ -116,7 +114,6 @@
 
 ## Create .gitignore
 
-### Collaborator
 
 11. **Generate and Update .gitignore:**
     ```bash
@@ -155,9 +152,10 @@
      git push -u origin collab-br # Set upstream
      ```
 
+## Admin
 ## Untracked files in the directory
 
-### Admin
+
 
 15. **Switch to main and update:**
     ```bash
@@ -175,7 +173,6 @@
 
 ## Fast forward merge
 
-### Admin
 
 17. **Merge admin-br to main:**
     - Ensure you are in main branch:
@@ -195,9 +192,11 @@
     git push
     ```
 
+## Collaborator
+
 ## Conflicted merge
 
-### Collaborator
+
 
 19. **Switch to main and update:**
     ```bash
@@ -235,7 +234,7 @@
     ```
     ❓ Do you know what it means to delete a branch? 
 
-### Admin
+## Admin
 
 23. **Pull Latest Changes:**
     ```bash
