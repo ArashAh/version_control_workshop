@@ -269,7 +269,7 @@
   
 29. **Reflect**
 
-    ❓ Can you imagine different scenarios where "amend", "un-commit", "reverse" or "revert" cab be used? 
+    ❓ Can you imagine different scenarios where "amend", "un-commit", "reverse" or "revert" can be used? 
 
 ### [Back to first page](./README.md)
 
