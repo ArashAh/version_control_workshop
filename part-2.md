@@ -8,7 +8,7 @@
 
 - [Initiate a project from Git](#initiate-a-project-from-git)
 - [Create a remote repository and connect](#create-a-remote-repository-and-connect)
-- [Clone / Push / Pull](#clone--push--pull)
+- [Commit / Push / Pull](#Commit--push--pull)
 - [Create and resolve a merge conflict](#create-and-resolve-a-merge-conflict)
 - [Detach the HEAD](#detach-the-head)
 
@@ -83,7 +83,7 @@
 
 ## Collaborator
 
-## Clone / Push / Pull
+## Commit / Push / Pull
 
 
 

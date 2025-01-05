@@ -20,7 +20,7 @@ If you have any questions, feel free to reach out to us at: contact@dscience.uio
 - [Part 2: Single-branch collaborative development ](./part-2.md)
   - Initiate a project from Git
   - Create a remote repository and connect
-  - Clone / Push / Pull
+  - Commit / Push / Pull
   - Create and resolve a merge conflict
   - Detach the HEAD
 - [Part 3: Multi-branch collaborative development ](./part-3.md)
