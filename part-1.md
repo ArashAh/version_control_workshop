@@ -170,8 +170,10 @@
 
 21. **Amend a Commit:**
     ```bash
-    git commit --amend "It is amended now"
+    git commit --amend 
     ```
+    - Inside the code editor prompt insert this sentence as the new commit message: "It is amended now" ans save the file. 
+
     - Look at the commit log 
      ```bash
     git log --oneline
