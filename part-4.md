@@ -76,7 +76,7 @@
    ```bash
    git fetch
    git branch -r 
-   git log --online --all 
+   git log --oneline --all 
    ```
    - Copy the hash of the commit you want to checkout to 
      
