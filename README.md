@@ -29,9 +29,10 @@ If you have any questions, feel free to reach out to us at: contact@dscience.uio
   - Untracked files in the directory
   - Fast forward merge
   - Conflicted merge
+  - Bad practice
 - [Part 4: Multi-branch collaborative development, best practices ](./part-4.md) 
   - Stash-checkout-switch-pop
-  - Merge from MAIN
-  - Pull request - after conflicts resolved
+  - Merge from MAIN - merge back to MAIN
+  - Rebase from MAIN - pull request
   - Pull request - without conflicts resolved
   - Merge to MAIN without pull request
