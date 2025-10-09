@@ -9,6 +9,8 @@
 - [Untracked files in the directory](#untracked-files-in-the-directory)
 - [Fast forward merge](#fast-forward-merge)
 - [Conflicted merge](#conflicted-merge)
+- [Bad practice](#bad-practice)
+
 
 ---
 
@@ -231,6 +233,8 @@
     git commit -m "merge commit 1 to main by collaborator"
     git push 
     ```
+## Bad practice
+
 ## Admin
 
 23. **Pull the latest changes:**

@@ -4,11 +4,10 @@
 
 ## Table of Contents
 
-- [Stash-checkout-switch-pop ](#stash-checkout-switch-pop)
-- [Merge from MAIN](#merge-from-main)
-- [Pull request - after conflicts resolved](#pull-request---after-conflicts-resolved)
+- [Stash-checkout-switch-pop](#stash-checkout-switch-pop)
+- [Merge from MAIN - merge back to MAIN](#merge-from-main---merge-back-to-main)
+- [Rebase from MAIN - pull request](#rebase-from-main---pull-request)
 - [Pull request - without conflicts resolved](#pull-request---without-conflicts-resolved)
-- [Merge to MAIN without pull request](#merge-to-main-without-pull-request)
 
 ---
 
@@ -56,7 +55,8 @@
    ```bash
    git checkout <commit hash>
    ```
-    ❓ You see an error, do you know why?   
+    ❓ You see an error, do you know why?  
+
    - Take a look at the content of `demo.txt` keep track of its last sentence.
    - Stash changes and now checkout the branch:
    ```bash
@@ -88,7 +88,7 @@
 
 ## Collaborator
 
-## Merge from MAIN
+## Merge from MAIN - merge back to MAIN
 
 7. **Merge from main branch:**
     ```bash
@@ -99,6 +99,7 @@
     git switch collab-br
     git merge main 
     ```
+    ❓ Could you rebase from main instead of merge? 
 
 8. **Resolve conflicts and continue:**
     - Resolve by accepting both versions.
@@ -107,7 +108,9 @@
     git add . 
     git commit -m "conflict 1 resolved to collab-br by collab"
     ```
+
     ❓ Is it a good practice to merge from main to your branch? Why?   
+
 9. **Further Update, commit and push to branch:**
     - Open `demo.txt` and add: “Input 5 to collab-br by collaborator, development continues after integrating latest version of main, then it will merged to main”
     - Add and commit:
@@ -128,6 +131,7 @@
     git merge collab-br
     ```
     ❓ Is there any conflict? why or why not? 
+
     ❓ Is there any better practice? 
 
 
@@ -144,7 +148,7 @@
 
 ## Collaborator
 
-## Pull request - after conflicts resolved
+## Rebase from Main - pull request
 
 13. **Switch to collbar-br, Update, Commit and push:**
     ```bash
@@ -168,14 +172,20 @@
     git log --oneline --all
     ``` 
     - Resolve the conflict by accepting both versions.
+
     ❓ Do you still need to commit and push? 
+
     - Add and commit:
     ```bash
     git add . 
     git commit -m "conflict 2 resolved to collab-br by collab"
     git push
+    ```
+
     - Check the Git Graph again 
-    ❓ what is the difference between merge from step 7 and rebase? 
+
+    ❓What is the difference between merge from step 7 and rebase? 
+    ❓Could you merge instead of rebase here? 
 
 
 
@@ -194,7 +204,9 @@
 
 17. **Accept the pull request and pull locally**
     - Follow GitHub instructions to accept the changes.
+
     ❓ Was there any conflict? Why yes or not? 
+    
     - Pull latest changes locally:
     ```bash
     git switch main
@@ -226,6 +238,7 @@
     git switch collab-br
     ```
     - Open `demo.txt` and add: “Input 7 to collab-br by collaborator, development continues regardless of the main’s status.”
+    
     - Add and commit:
     ```bash
     git add . 
@@ -272,6 +285,7 @@
     git pull
     ```
     ❓ Did your input 7 (from step 20) get integrate into the main? 
+
     ❓ Do you see input 7 in your branch? What happened?    
 
 ### [Back to first page](./README.md)
