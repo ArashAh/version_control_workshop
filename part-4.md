@@ -12,66 +12,39 @@
 
 ---
 
-## Admin
-
-1. **Ensure latest version of remote repo:**
-   ```bash
-   git fetch 
-   git status 
-   git pull # if needed
-   ```
-
-2. **Update and commit:**
-   - Open `demo.txt` and add this sentence: “Input 1 to main by admin, collaborator can start with this commit and continue on a new branch”
-   - Add and commit:
-   ```bash
-   git add . 
-   git commit -m "commit 1 to main by admin"
-   ```
-
-3. **Push changes to remote:**
-   ```bash
-   git push
-   ```
-
 ## Collaborator
 
-4. **Ensure latest version of remote repo:**
+1. **Ensure latest version of remote repo:**
    ```bash
    git fetch 
    git status 
    git pull 
    ```
 
-5. **Create and switch to a new branch:**
+2. **Switch to a collab-br, update, commit and push:**
+   
    ```bash
-   git branch collab-br2
-   git switch collab-br2
+   git switch collab-br
    ```
-
-6. **Update and commit:**
-   - Open `demo.txt` and add this sentence: “Input 1 to collab-br2 by collaborator, admin should take a look at this before going ahead”
+   - Open `demo.txt` and add this sentence: “Input 4 to collab-br by collaborator, admin should take a look at this before going ahead”
    - Add and commit:
    ```bash
    git add . 
-   git commit -m "Commit 1 to collab-br2 by collaborator"
+   git commit -m "Commit 4 to collab-br by collaborator"
+   git push 
    ```
-
-7. **Push the new branch to Remote:**
-   ```bash
-   git push -u origin collab-br2
+   
    ```
 ## Admin 
 
 ## Stash-checkout-switch-pop 
 
 
-
-8. **Update but not commit:**
+3. **Update but not commit:**
    
-   - Update `demo.txt`: Add “Input 2 to main by admin, to be stashed once”
+   - Update `demo.txt`: Add “Input 4 to main by admin. In the middle of his work, admin is asked ot check latest version of collab-br. Admin's current changes need to be stashed once.”
 
-9. **Checkout a remote branch**
+4. **Checkout a remote branch**
    - Fetch latest changes:
    ```bash
    git fetch
@@ -90,9 +63,9 @@
    git stash 
    git checkout <commit hash>
    ```
-    ❓ Take a look at the content of `demo.txt` do you see the content of the last commit by te collaborator from step 6? 
+    ❓ Take a look at the content of `demo.txt` do you see what collaborator wanted you to check (Input 4 to collab-br by collaborator)? 
 
-10. **Retrieve stashed Work after switching back:**
+5. **Retrieve stashed Work after switching back:**
     - Switch back to your branch:
     ```bash
     git switch - 
@@ -102,18 +75,14 @@
     ```bash
     git stash pop 
     ```
-    ❓ Take a look at the content of `demo.txt`, do you see your latest edition from step 8? 
+    ❓ Take a look at the content of `demo.txt`, do you see your work from before stash (Input 4 to main by admin)? 
 
-11. **Update and commit to main:**
-    - Open `demo.txt` and add this sentence: “Continue with input 2 to main by admin, collaborator needs to integrate this before going forward”
+6. **Update, commit to main and push:**
+    - Open `demo.txt` and add this sentence: “Continue input 4 to main by admin, the sentence above was popped from the work before stash. Collaborator needs to integrate this before going forward, and merging back to main.”
     - Add and commit:
     ```bash
     git add . 
-    git commit -m "commit 2 to main by admin"
-    ```
-
-12. **Push changes to remote:**
-    ```bash
+    git commit -m "commit 4 to main by admin"
     git push
     ```
 
@@ -121,17 +90,17 @@
 
 ## Merge from MAIN
 
-13. **Update and merge main branch:**
+7. **Merge from main branch:**
     ```bash
     git switch main
     git fetch
     git status
     git pull 
-    git switch collab-br2
+    git switch collab-br
     git merge main 
     ```
 
-14. **Resolve conflicts and continue:**
+8. **Resolve conflicts and continue:**
     - Resolve by accepting both versions.
     - Add and commit:
     ```bash
@@ -139,69 +108,91 @@
     git commit -m "conflict 1 resolved to collab-br by collab"
     ```
     ❓ Is it a good practice to merge from main to your branch? Why?   
-15. **Further Update and commit to branch:**
-    - Open `demo.txt` and add: “Input 2 to collab-br2 by collaborator, development continues after integrating latest version of main”
+9. **Further Update, commit and push to branch:**
+    - Open `demo.txt` and add: “Input 5 to collab-br by collaborator, development continues after integrating latest version of main, then it will merged to main”
     - Add and commit:
     ```bash
     git add . 
-    git commit -m "commit 2 to collab-br2 by collaborator"
+    git commit -m "commit 5 to collab-br by collaborator"
     ```
+10. **Switch to main and get the latest updates:** 
+    ``` bash 
+    git switch main 
+    git fetch 
+    git pull # if needed
+    ```
+    ❓ Is it a safe to merge to main now? After you updated collab-br again? 
+
+11. **Merge collab-br into main:**
+    ```bash
+    git merge collab-br
+    ```
+    ❓ Is there any conflict? why or why not? 
+    ❓ Is there any better practice? 
+
+
 ## Admin
 
-16. **Update and commit to main:**
-    - Open `demo.txt` and add: “Input 3 to main by admin, to be integrated by collaborator before any pull request”
+12. **Update and commit to main:**
+    - Open `demo.txt` and add: “Input 5 to main by admin, to be integrated by collaborator before any pull request - rebase the feature branch with this one.”
     - Add and commit:
     ```bash
     git add . 
-    git commit -m "commit 3 to main by admin"
+    git commit -m "commit 5 to main by admin"
+    git push 
     ```
 
-17. **Push changes to remote:**
-    ```bash
-    git push
-    ```
 ## Collaborator
 
 ## Pull request - after conflicts resolved
 
-
-
-18. **Merge main into branch and resolved the conflict**
+13. **Switch to collbar-br, Update, Commit and push:**
     ```bash
-    git switch main
-    git fetch
-    git status
-    git pull 
-    git switch collab-br2
-    git merge main 
+    git switch collab-br
     ```
-    - Resolve conflicts in `demo.txt` and save the file
-   ❓ Is it a good practice to merge from main to your branch before pull request? Why?
-19. **Commit and push:**
-      - Add and commit:
-      ```bash
-      git add . 
-      git commit -m "conflict 2 resolved to collab-br by collab, merging main into collab-br2 before pull request"
-      ```
-     - Push changes:
-     ```bash
-     git push
-     ```
+    - Open `demo.txt` and add this sentence: “Input 6 to collab-br by collaborator - this is going to rebased by another commit from main”
 
-20. **Initiate a pull request on GitHub:**
-    - Send a pull request to merge `collab-br2` into `main`.
+    - Add and commit:
+    ```bash
+    git add . 
+    git commit -m "Commit 6 to collab-br by collaborator"
+    ```
+
+14. **Rebase the feature branch with main**
+    - Check the Git Graph first 
+    - Switch to collab-br and rebase the branch with main 
+    ```bash
+    git log --oneline --all 
+    git switch collab-br
+    git rebase main
+    git log --oneline --all
+    ``` 
+    - Resolve the conflict by accepting both versions.
+    ❓ Do you still need to commit and push? 
+    - Add and commit:
+    ```bash
+    git add . 
+    git commit -m "conflict 2 resolved to collab-br by collab"
+    git push
+    - Check the Git Graph again 
+    ❓ what is the difference between merge from step 7 and rebase? 
+
+
+
+15. **Initiate a pull request on GitHub:**
+    - Send a pull request to merge `collab-br` into `main`.
 
 ## Admin
 
-21. **Review and pull request:**
+16. **Review and pull request:**
     - Check pull request on GitHub.
     - Optionally, fetch and checkout branch before accepting:
     ```bash
     git fetch
-    git switch collab-br2
+    git switch collab-br
     ```
 
-22. **Accept the pull request and pull locally**
+17. **Accept the pull request and pull locally**
     - Follow GitHub instructions to accept the changes.
     ❓ Was there any conflict? Why yes or not? 
     - Pull latest changes locally:
@@ -212,14 +203,14 @@
     git pull
     ```
 
-23. **Update and commit to main:**
-    - Open `demo.txt` and add: “Input 4 to main by admin, to be ignored by collaborator before a pull request”
+18. **Update and commit to main:**
+    - Open `demo.txt` and add: “Input 6 to main by admin, to be ignored by collaborator before a pull request. If you don't resolve you conflict, other might.”
     - Add and commit:
     ```bash
     git add . 
-    git commit -m "commit 4 to main by admin"
+    git commit -m "commit 6 to main by admin"
     ```
-24. **Push Changes to Remote:**
+19. **Push Changes to Remote:**
     ```bash
     git push
     ```
@@ -229,30 +220,29 @@
 ## Pull request - without conflicts resolved
 
 
-
-25. **Update and commit to the branch:**
+20. **Update and commit to the branch:**
     - Make sure you are in your branch 
     ```bash 
-    git switch collab-br2
+    git switch collab-br
     ```
-    - Open `demo.txt` and add: “Input 3 to collab-br2 by collaborator, development continues regardless of the main’s status”
+    - Open `demo.txt` and add: “Input 7 to collab-br by collaborator, development continues regardless of the main’s status.”
     - Add and commit:
     ```bash
     git add . 
-    git commit -m "commit 3 to collab-br2 by collaborator"
+    git commit -m "commit 7 to collab-br by collaborator"
     ```
 
-26. **Push changes:**
+21. **Push changes:**
     ```bash
     git push
     ```
 
-27. **Initiate a pull request on GitHub:**
-    - Send a pull request to merge `collab-br2` into `main`.
+22. **Initiate a pull request on GitHub:**
+    - Send a pull request to merge `collab-br` into `main`.
 
 ## Admin
 
-28. **Resolve conflicts on GitHub:**
+23. **Resolve conflicts on GitHub:**
 
      ❓ What is the difference between this and the previous pull request?
 
@@ -260,77 +250,28 @@
 
      ❓ Do you know where you resolved the conflict?    
 
-29. **Pull Latest Changes Locally:**
+24. **Pull Latest Changes Locally:**
     ```bash
     git fetch
     git status
     git pull
-    ```
-
-30. **Update and commit to main:**
-    - Open `demo.txt` and add: “Input 5 to main by admin, to be ruined by collaborator without a pull request”
-    - Add and commit:
-    ```bash
-    git add . 
-    git commit -m "commit 5 to main by admin"
-    ```
-
-31. **Push changes to remote:**
-    ```bash
-    git push
     ```
 
 ## Collaborator
 
-## Merge to MAIN without pull request
+25. **Get the latest changes**
 
-
-
-32. **Get the latest version of main and the branch from GitHub:**
     ```bash
     git switch main
     git fetch
     git status
-    git pull 
-    git switch collab-br2
+    git pull
+    git switch collab-br
+    git fetch
     git status
     git pull
     ```
-    ❓ Did you have any update into your branch? Why? 
-
-33. **Update and commit to the branch:**
-    - Open `demo.txt` and add: “Input 4 to collab-br2 by collaborator, this is going to make a mess in the main branch by merge”
-    - Add and commit:
-    ```bash
-    git add . 
-    git commit -m "commit 4 to collab-br2 by collaborator"
-    ```
-
-34. **Merge Collab Branch to Main:**
-    - Switch and merge:
-    ```bash
-    git switch main
-    git merge collab-br2
-    ```
-    - Resolve conflicts by accepting incoming changes.
-
-35. **Commit and Push:**
-   
-    - Add and commit:
-    ```bash
-    git add .
-    git commit -m "conflict 3 resolved in main, resulted in collapse of main"
-    ```
-    - Push final changes:
-     ```bash
-     git push 
-     ```
-     - Check the content of the `demo.text` on GitHub. 
-
-     ❓ What happened to the content that admin added in step 30? 
-
-     ❓ Is it a good practice to merge to main without pull request?
-
-     ❓ Do you have any solution for fixing this? 
+    ❓ Did your input 7 (from step 20) get integrate into the main? 
+    ❓ Do you see input 7 in your branch? What happened?    
 
 ### [Back to first page](./README.md)

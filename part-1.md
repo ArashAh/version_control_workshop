@@ -56,8 +56,8 @@
 
 7. **Creating a Personal Access Token (PAT)**:
 
-   - On GitHub, navigate to `GitHub > Settings > Developer Settings > Personal Access Token > Generate New Token`. Select:
-     - `Repo`
+   - On GitHub, navigate to `GitHub > Settings > Developer Settings > Personal Access Token > Tokens (classic) > Generate New Token (classic)`. Select:
+     - `Repo`git 
      - `Workflow`
      - `User`
 
@@ -85,9 +85,10 @@
     ls
     ```
 
-10. **Check the connection status:**
+10. **Check the connection and status status:**
     ```bash
     git remote show origin
+    git status
     ```
 
 11. **Modify README and push back to GitHub:**
@@ -110,13 +111,14 @@
 13. **Edit on GitHub and pull changes:**
 
     - On GitHub, edit README to add: "Input from remote repo to be pulled to local repo."
-    - Commit message: “Connecting from GitHub.”
+    - Commit message: “Connecting from GitHub”
     - Pull the changes on the command line:
     ```bash
     git status 
     git fetch origin main
     git status 
     git pull origin main
+    git status
     ```
 
 14. **Check Commit Logs:**
@@ -134,19 +136,22 @@
 16. **Clone using the IDE**
 
     - In RStudio: Go to `File > New Project > Version Control > Git`, paste the repo URL, choose a directory and create the project.
-    - In VS Code: open a folder, then `ctrl+shift+p >Clone > Clone from GitHub`, paste the repo URL and hit enter 
-    - Verify the clone
+    - In VS Code:  `ctrl+shift+p >Clone > Clone from GitHub`, paste the repo URL and hit enter
+    - Navigate to the folder you want the repository to clone in  
+    - Verify the clone (check if the file are there)
 
 17. **Edit in IDE and push changes:**
 
     - Using IDE edit README to add: “Input from local repo to be pushed to remote repo using RStudio/VS code.”
-    - Commit message: “Commit from IDE.”
+    - Commit message: “Commit from IDE”
     - Add, commit, and push changes using the IDE.
+    - Check the Git Graph 
+    - Check the README content in the dual view
 
 18. **Edit on GitHub and pull changes using IDE:**
 
     - On GitHub, edit README to add: "Input from remote repo to be pulled to local repo using IDE."
-    - Commit message: “Editing from GitHub.”
+    - Commit message: “Editing from GitHub”
     - Fetch and pull the latest changes from GitHub using the IDE 
 
 19. **Review commit history in IDE:**

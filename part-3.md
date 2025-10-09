@@ -225,20 +225,61 @@
     ```
     ❓ Why the file that was shown in step 20 is not there anymore? 
 
-22. **Delete branch, commit, and push:**
+22. **Commit, and push:**
     ```bash
-    git branch -d collab-br
     git add . 
-    git commit -m "merge commit to main by collaborator"
+    git commit -m "merge commit 1 to main by collaborator"
     git push 
     ```
-    ❓ Do you know what it means to delete a branch? 
-
 ## Admin
 
-23. **Pull Latest Changes:**
+23. **Pull the latest changes:**
     ```bash
     git pull
     ```
+24. **Update, commit and push to main branch:** 
+    - Open `demo.txt` and add this sentence: “Input 3 to main by admin - this is a critical point, but it is going to be overwritten by collaborator by merging to main”
+    - Add and commit:
+    ```bash
+    git add . 
+    git commit -m "Commit 3 to main by admin"
+    git push
+    ```
 
+## Collaborator 
+
+25. **Switch to collbar-br, Update, Commit and push:**
+    ```bash
+    git switch collab-br
+    ```
+    - Open `demo.txt` and add this sentence: “Input 3 to collab-br by collaborator - this is going to mess with the main branch”
+
+    - Add and commit:
+    ```bash
+    git add . 
+    git commit -m "Commit 3 to collab-br by collaborator"
+    ```
+
+26. **Switch to main and update:**
+    ```bash
+    git switch main
+    git fetch
+    git status
+    git pull # if needed
+    ```
+27. **Merge collab-br into main:**
+    ```bash
+    git merge collab-br
+    ```
+    - Resolve conflicts in your code editor, this time accept incoming changes and save.
+    
+28. **Commit, and push:**
+    ```bash
+    git add . 
+    git commit -m "merge commit 2 to main by collaborator"
+    git push 
+    ```
+    ❓ Check the content of the main, Do you see the critical sentence that was added in step 24?   
+    ❓ Do you have any idea how to avoid such critical mistakes? 
 ### [Back to first page](./README.md)
+

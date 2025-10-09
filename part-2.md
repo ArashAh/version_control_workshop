@@ -46,7 +46,7 @@
 ## Create a remote repository and connect
 
 3. **Create a repo On GitHub:**
-   - Create a repo named “vc-demo” without README.
+   - Create a private repo named “vc-demo” without README.
 
 4. **Rename branch:**
    - Rename the branch from master to main:
@@ -97,6 +97,7 @@
    - Open `demo.txt` and add: “Input 1 to main branch by collaborator”, save the file.
    - Add and commit changes:
    ```bash
+   cd <into the folder that was created by clone>
    git add . 
    git commit -m "commit 1 to main by collaborator"
    ```
@@ -160,7 +161,7 @@
     ❓ You get a merge conflict? Do you know why? Why is it a merge?  
 
 17. **Resolve Conflict:**
-    - Resolve in RStudio or VS Code. It means select which version to stay in the file and save it. 
+    - Resolve in RStudio or VS Code. It means select which version to stay (keep both changes) in the file and save it. 
     - Add file and commit:
     ```bash
     git add . 
@@ -200,21 +201,29 @@
     
     ❓ Can you verify if the content of the file is according to the corresponding commit? 
 
-21. **Create a Branch from the detached head state:**
-    - If retaining changes, commit and create new branch:
+21. **Return to Main without change:**
+    - If you want to go back to main without any commit or change simply attach the head back and switch to main:
     ```bash
-    git switch -c <branch name>
+    git switch - 
+    git log --oneline --all
+    ```
+
+22. **Create a Branch from the detached head state:**
+    - Repeat step 20, now we want to make new branch from there 
+    - Commit and create new branch:
+    ```bash
+    git switch -c test-br
+    ``` 
+    Open `demo.txt` and add: “Input to test-bar branch by admin from detached head state”, save the file.
+    
+    ```bash
     git commit -a -m "commit from the detached head state"
     ```
     ❓ Can you imagine a scenario where this functionality can be useful? 
-22. **Switch Back to Main Branch:**
+23. **Switch Back to Main Branch:**
     ```bash
     git switch main 
     ```
 
-23. **Return to Main without change:**
-    - If you want to go back to main without any commit or change simply attach the head back and switch to main:
-    ```bash
-    git switch - 
-    ```
+
 ### [Back to first page](./README.md)
