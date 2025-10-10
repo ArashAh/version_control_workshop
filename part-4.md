@@ -17,7 +17,7 @@
    ```bash
    git fetch 
    git status 
-   git pull 
+   git pull # if needed
    ```
 
 2. **Switch to a collab-br, update, commit and push:**
@@ -26,7 +26,7 @@
    git switch collab-br
    ```
    - Open `demo.txt` and add this sentence: “Input 4 to collab-br by collaborator, admin should take a look at this before going ahead”
-   - Add and commit:
+   - Add, commit and push:
    ```bash
    git add . 
    git commit -m "Commit 4 to collab-br by collaborator"
@@ -41,7 +41,7 @@
 
 3. **Update but not commit:**
    
-   - Update `demo.txt`: Add “Input 4 to main by admin. In the middle of his work, admin is asked ot check latest version of collab-br. Admin's current changes need to be stashed once.”
+   - Update `demo.txt`: Add “Input 4 to main by admin. In the middle of his work, admin is asked to check latest version of collab-br. Admin's current changes need to be stashed once.”
 
 4. **Checkout a remote branch**
    - Fetch latest changes:
@@ -122,7 +122,7 @@
     ``` bash 
     git switch main 
     git fetch 
-    git pull # if needed
+    git status
     ```
     ❓ Is it a safe to merge to main now? After you updated collab-br again? 
 
@@ -134,10 +134,21 @@
 
     ❓ Is there any better practice? 
 
+    ```bash 
+    git push 
+    ``` 
+    ❓ Didn't you need to add and commit after merge this time? why not? 
 
 ## Admin
 
 12. **Update and commit to main:**
+    - Get the latest version of main 
+    ```bash
+    git fetch 
+    git status 
+    git pull 
+    ```
+
     - Open `demo.txt` and add: “Input 5 to main by admin, to be integrated by collaborator before any pull request - rebase the feature branch with this one.”
     - Add and commit:
     ```bash
@@ -154,7 +165,7 @@
     ```bash
     git switch collab-br
     ```
-    - Open `demo.txt` and add this sentence: “Input 6 to collab-br by collaborator - this is going to rebased by another commit from main”
+    - Open `demo.txt` and add this sentence: “Input 6 to collab-br by collaborator - this is going to be rebased by another commit from main”
 
     - Add and commit:
     ```bash
@@ -163,23 +174,22 @@
     ```
 
 14. **Rebase the feature branch with main**
+    - Get the latest version of main 
+    ```bash
+    git switch main
+    git pull
+    ```
     - Check the Git Graph first 
     - Switch to collab-br and rebase the branch with main 
     ```bash
-    git log --oneline --all 
     git switch collab-br
     git rebase main
-    git log --oneline --all
     ``` 
-    - Resolve the conflict by accepting both versions.
-
-    ❓ Do you still need to commit and push? 
-
-    - Add and commit:
-    ```bash
+    - Resolve the conflict by accepting both versions and save. 
+    ```bash 
     git add . 
-    git commit -m "conflict 2 resolved to collab-br by collab"
-    git push
+    git rebase --continue # do not change the original commit message 
+    git push 
     ```
 
     - Check the Git Graph again 
@@ -215,15 +225,12 @@
     git pull
     ```
 
-18. **Update and commit to main:**
-    - Open `demo.txt` and add: “Input 6 to main by admin, to be ignored by collaborator before a pull request. If you don't resolve you conflict, other might.”
+18. **Update, add, commit and push to main:**
+    - Open `demo.txt` and add: “Input 6 to main by admin, to be ignored by collaborator before a pull request. If you don't resolve your conflicts, others might.”
     - Add and commit:
     ```bash
     git add . 
     git commit -m "commit 6 to main by admin"
-    ```
-19. **Push Changes to Remote:**
-    ```bash
     git push
     ```
 
@@ -232,30 +239,26 @@
 ## Pull request - without conflicts resolved
 
 
-20. **Update and commit to the branch:**
+19. **Update and commit to the branch:**
     - Make sure you are in your branch 
     ```bash 
     git switch collab-br
     ```
     - Open `demo.txt` and add: “Input 7 to collab-br by collaborator, development continues regardless of the main’s status.”
     
-    - Add and commit:
+    - Add, commit and push:
     ```bash
     git add . 
     git commit -m "commit 7 to collab-br by collaborator"
-    ```
-
-21. **Push changes:**
-    ```bash
     git push
     ```
 
-22. **Initiate a pull request on GitHub:**
+20. **Initiate a pull request on GitHub:**
     - Send a pull request to merge `collab-br` into `main`.
 
 ## Admin
 
-23. **Resolve conflicts on GitHub:**
+21. **Resolve conflicts on GitHub:**
 
      ❓ What is the difference between this and the previous pull request?
 
@@ -263,7 +266,7 @@
 
      ❓ Do you know where you resolved the conflict?    
 
-24. **Pull Latest Changes Locally:**
+22. **Pull Latest Changes Locally:**
     ```bash
     git fetch
     git status
@@ -272,7 +275,7 @@
 
 ## Collaborator
 
-25. **Get the latest changes**
+23. **Get the latest changes**
 
     ```bash
     git switch main
