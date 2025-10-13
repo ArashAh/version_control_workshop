@@ -29,7 +29,7 @@
 ## Establish the Git-GitHub connection - Clone
 
 3. **Create a repo on GitHub** 
-   - Create a private repo with README on GitHub and stay logged in.
+   - Create a private repo with README on GitHub and name it "vc-demo-basic" and stay logged in.
 
 4. **Copy the HTTPS link**
 
