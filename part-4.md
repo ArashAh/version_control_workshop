@@ -191,10 +191,18 @@
     git rebase --continue # do not change the original commit message 
     git push 
     ```
+    ❓Do you see an error with git push? do you know why? 
+
+    - force push after rebase 
+
+    ```bash
+    git push --force # to be safer you can use --force-with-lease
+    ``` 
 
     - Check the Git Graph again 
 
     ❓What is the difference between merge from step 7 and rebase? 
+
     ❓Could you merge instead of rebase here? 
 
 
@@ -287,8 +295,11 @@
     git status
     git pull
     ```
+    
     ❓ Did your input 7 (from step 20) get integrate into the main? 
 
     ❓ Do you see input 7 in your branch? What happened?    
+
+    ❓ is there a scenario where sending a pull req without resolving the conflict makes sense? 
 
 ### [Back to first page](./README.md)
