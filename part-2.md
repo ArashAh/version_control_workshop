@@ -28,6 +28,8 @@
    cd vc-demo-local
    git status 
    git init 
+   ls 
+   cd <into the folder made by git init>
    git status 
    ```
 
