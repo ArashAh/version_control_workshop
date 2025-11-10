@@ -106,6 +106,8 @@
     git status
     ```
 
+    ❓ Do you know what "your branch" and "origin/main" are referring to in the git status response? 
+
 12. **Refresh GitHub to confirm changes.**
 
 13. **Edit on GitHub and pull changes:**
@@ -120,6 +122,7 @@
     git pull origin main
     git status
     ```
+    ❓ What is the difference between fetch and pull? 
 
 14. **Check Commit Logs:**
     ```bash

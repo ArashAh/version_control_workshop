@@ -28,8 +28,6 @@
    cd vc-demo-local
    git status 
    git init 
-   ls 
-   cd <into the folder made by git init>
    git status 
    ```
 
@@ -160,7 +158,9 @@
     git status 
     git pull 
     ```
-    ❓ You get a merge conflict? Do you know why? Why is it a merge?  
+    ❓ You get a merge conflict? Do you know why? Why is it a merge? 
+
+    - If instead of merge conflict you got the config options you are using a newer version of git that safeguards the local branch. You need to select the option that avoids rebase, ask for help if not sure. 
 
 17. **Resolve Conflict:**
     - Resolve in RStudio or VS Code. It means select which version to stay (keep both changes) in the file and save it. 
