@@ -21,9 +21,20 @@
    git config --global user.email "<YOUR EMAIL ADDRESS>"
    ```
 
+   - If you are using vscode, make it default code editor for git 
+   ```bash 
+   git config --global core.editor "code --wait"
+   ```
+   - If you are not using vscode, make nano the default code editor for git 
+
+   ```bash 
+   git config --global core.editor "nano"
+   ```
+
 2. **Check Configuration:**
    ```bash
    git config --global --list
+   git config --global core.editor
    ```
 
 ## Establish the Git-GitHub connection - Clone
@@ -180,7 +191,7 @@
     ```bash
     git commit --amend 
     ```
-    - Inside the code editor prompt insert this sentence as the new commit message: "It is amended now" and save the file. 
+    - Inside the code editor prompt insert this sentence as the new commit message: "It is amended now" save and close the file. 
 
     - Look at the commit log 
      ```bash

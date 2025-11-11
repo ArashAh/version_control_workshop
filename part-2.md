@@ -19,9 +19,8 @@
 ## Initiate a project from Git
 
 
-
 1. **Create a local demo project:**
-   - Make a directory for a demo project on your local machine and initialize a local repo:
+   - Make a directory for a demo project on your local machine and initialize a local repo, this directory should be different than the one you used for part 1:
    ```bash
    cd <into the folder that to place the workshop material>
    mkdir vc-demo-local
