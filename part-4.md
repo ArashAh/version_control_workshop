@@ -43,14 +43,14 @@
    
    - Update `demo.txt`: Add “Input 4 to main by admin. In the middle of his work, admin is asked to check latest version of collab-br. Admin's current changes need to be stashed once.”
 
-4. **Checkout a remote branch**
-   - Fetch latest changes:
+4. **Checkout a commit in the remote branch**
+   - Fetch latest changes, get a list of remote branches and see a log of all commits:
    ```bash
    git fetch
    git branch -r 
    git log --oneline --all 
    ```
-   - Copy the hash of the commit you want to checkout to 
+   - Copy the hash of the last commit in the collab-br 
      
    ```bash
    git checkout <commit hash>

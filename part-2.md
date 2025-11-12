@@ -87,16 +87,17 @@
 
 
 8. **Clone the repo:**
-   - Find the repo by the admin in your repository list and clone it:
+   - Find the repo by the admin in your repository list and clone it and cd to the cloned directory:
      ```bash
      git clone <https of repo on github> 
+     cd <into the folder that was created by clone>
      ```
 
 9. **Edit and commit:**
    - Open `demo.txt` and add: “Input 1 to main branch by collaborator”, save the file.
    - Add and commit changes:
+
    ```bash
-   cd <into the folder that was created by clone>
    git add . 
    git commit -m "commit 1 to main by collaborator"
    ```

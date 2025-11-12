@@ -21,7 +21,7 @@
    git config --global user.email "<YOUR EMAIL ADDRESS>"
    ```
 
-   - If you are using vscode, make it default code editor for git 
+   - If you are using vscode, make it the default code editor for git 
    ```bash 
    git config --global core.editor "code --wait"
    ```
