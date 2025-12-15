@@ -40,7 +40,7 @@
 ## Establish the Git-GitHub connection - Clone
 
 3. **Create a repo on GitHub** 
-   - Create a private repo with README on GitHub and name it "vc-demo-basic" and stay logged in.
+   - Create a **private** repo **with README** on GitHub and name it "vc-demo-basic" and stay logged in.
 
 4. **Copy the HTTPS link**
 
@@ -83,7 +83,36 @@
    - In this stage the repo should be cloned successfully
 
    - After this step Git should remember the GitHib credentials until the PAT is expired. Otherwise read more on https://docs.github.com/en/get-started/getting-started-with-git/caching-your-github-credentials-in-git?platform=linux
+   
+   - If you are asked to authenticate when you push and not when you cloned, check if you repo is made private.
+   
+   - If git does not remember the authentication and asks for it every time, run
+   
+   ``` bash
+    git config --show-origin --get-all credential.helper 
+   ``` 
+   
+   - If no credential helper shows up run: 
 
+   Windows (recommended)
+   ```bash 
+    git config --global credential.helper manager
+   ```
+    macOS
+   ```bash 
+    git config --global credential.helper osxkeychain
+   ```
+    Linux (easy but less secure)
+   
+   ```bash 
+    git config --global credential.helper store
+   ```
+ 
+   Linux (better: cache in memory for a while)
+   
+   ```bash 
+   git config --global credential.helper 'cache --timeout=3600'
+   ```
 
 ## Commit / Push / Pull
 
@@ -96,11 +125,13 @@
     ls
     ```
 
-10. **Check the connection and status status:**
+10. **Check the connection and status :**
     ```bash
     git remote show origin
     git status
     ```
+
+    ❓1. Can you see the connection between remote and local branch? 
 
 11. **Modify README and push back to GitHub:**
 
@@ -117,7 +148,7 @@
     git status
     ```
 
-    ❓ Do you know what "your branch" and "origin/main" are referring to in the git status response? 
+    ❓ 2. Do you know what "your branch" and "origin/main" are referring to in the git status response? 
 
 12. **Refresh GitHub to confirm changes.**
 
@@ -133,7 +164,7 @@
     git pull origin main
     git status
     ```
-    ❓ What is the difference between fetch and pull? 
+    ❓ 3. What is the difference between fetch and pull? 
 
 14. **Check Commit Logs:**
     ```bash
@@ -150,8 +181,7 @@
 16. **Clone using the IDE**
 
     - In RStudio: Go to `File > New Project > Version Control > Git`, paste the repo URL, choose a directory and create the project.
-    - In VS Code:  `ctrl+shift+p >Clone > Clone from GitHub`, paste the repo URL and hit enter
-    - Navigate to the folder you want the repository to clone in  
+    - In VS Code:  `ctrl+shift+p >Clone > Clone from GitHub`, paste the repo URL and hit enter, navigate to the folder you want the repository to clone in  
     - Verify the clone (check if the file are there)
 
 17. **Edit in IDE and push changes:**
@@ -167,6 +197,8 @@
     - On GitHub, edit README to add: "Input from remote repo to be pulled to local repo using IDE."
     - Commit message: “Editing from GitHub”
     - Fetch and pull the latest changes from GitHub using the IDE 
+
+    ❓ 4. Can you fetch only using RStudio's Git interface? 
 
 19. **Review commit history in IDE:**
     - In RSTudio: use git history 
@@ -198,7 +230,13 @@
     git log --oneline
     ```
 
-    ❓ Has the commit message been amended? 
+    ❓5. Compare the output of the two last git logs, has the commit message been amended? 
+
+    ❓6. What happens if you already have pushed the commit and now you want to amend it? 
+
+    ❓7. Can you force push the change to the remote branch? When should you avoid it? 
+
+    ❓8. What is the difference between git push --force and git push --force-with-lease? 
 
 
 22. **Commit to be uncommitted** 
@@ -221,9 +259,10 @@
      ```bash
     git log --oneline
     ```
-    ❓ Has the last commit disappeared? 
+    ❓ 9. Has the last commit disappeared? 
 
-    ❓ Check the content of the README file, has the content changed as a result of last operation?  
+    ❓ 10. Check the content of the README file, has the content changed as a result of last operation?  
+
 
 24. **Commit to be reversed:**
     - Look at the Git status    
@@ -231,7 +270,7 @@
     git status
     ```
 
-    ❓ You see uncommitted changes, can you verify what changes are to be committed? 
+    ❓ 11. You see uncommitted changes, can you verify what changes are to be committed? Aren't these the changes that were left as a result of the previous uncommit action? 
 
     - commit: 
     ```bash
@@ -243,6 +282,8 @@
     ```
 
 25. **Reverse a commit:**
+    - Now, we want to reverse the commit and the content. 
+
     ```bash
     git reset --hard HEAD~1
     ```
@@ -250,10 +291,18 @@
      ```bash
     git log --oneline
     ```
-    ❓ Has the last commit disappeared? 
+    ❓12. Has the last commit disappeared? 
 
 
-    ❓ Check the content of the README file, can you explain what happened to the latest changes you committed in step 23? 
+    ❓13. Check the content of the README file, can you explain what happened to the latest changes you committed in step 23? 
+
+
+    ❓14. What happens if you already have pushed the commit?
+
+
+    ❓15. Is there a better approach to reversing the history if the commit is already pushed to a share branch? 
+
+
 
 26. **Commit to be reverted:**
     
@@ -281,14 +330,14 @@
     git log --oneline
     ```
     
-    ❓ Has the last commit disappeared? 
+    ❓16. Has the last commit disappeared? 
 
 
-    ❓ Check the content of the README file, can you explain what happened to the latest changes you committed in step 26? 
+    ❓17. Check the content of the README file, can you explain what happened to the latest changes you committed in step 26? 
   
 29. **Reflect**
 
-    ❓ Can you imagine different scenarios where "amend", "un-commit", "reverse" or "revert" can be used? 
+    ❓18. Can you imagine different scenarios where "amend", "un-commit", "reverse" or "revert" can be used? 
 
 ### [Back to first page](./README.md)
 
