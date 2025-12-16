@@ -53,9 +53,9 @@
    echo "raw-data/" >> .gitignore
    git status 
    ```
-   - Compare the result of git status with the one in step 3. 
+   ❓1. Compare the result of git status with the one in step 3, what is the difference? 
 
-   ❓ Can you think of potential things to ignore in a repo? 
+   ❓2. Can you think of potential things to ignore in a repo? 
 
 5. **Update and commit while ignoring:**
    - Open `demo.txt` and add this sentence: “Input 1 to admin-br by admin”
@@ -80,13 +80,24 @@
    git push
    ```
 
-    ❓You get an error, do you know why?  
-   - Push with setting an upstream:  
+   ❓3. You get an error, why? Run the following command, it might give you some clue: 
+
+   ```bash
+   git remote show origin
+   ```
+   
+   - To fix the error, push with setting an upstream:  
 
    ```Bash
    git push -u origin admin-br # Set upstream
    git branch -r
    ```
+
+   ```bash
+   git remote show origin
+   ```
+   ❓4. What has changed now? 
+
 
 ## Collaborator
 
@@ -124,7 +135,7 @@
     echo "raw-data/" >> .gitignore
     git status
     ```
-    - Compare the result of git status with the one in step 10. 
+    ❓5. Compare the result of git status with the one in step 10, what is the difference? 
 
 12. **Update and Commit:**
     - Open `demo.txt` and add this sentence: “Input 1 to collab-br by collaborator”
@@ -148,11 +159,13 @@
     git branch -r
     git push
     ```
-    ❓ You get an error, do you know why?  
+    ❓6. You get an error, do you know why? This is similar to step 7, if you still struggle with it, ask for help. 
+
     - Push with setting an upstream:  
      ```Bash
      git push -u origin collab-br # Set upstream
      ```
+    ❓7. What is the difference of this approach with part 2? Why can we push without merge conflict? 
 
 ## Admin
 ## Untracked files in the directory
@@ -171,7 +184,7 @@
     ```bash
     git status
     ```
-    ❓ Check that you have 1 file and 1 folder to add when you are in main branch, these are the same files that you added when your head was in your branch, do you know why they show up here? 
+    ❓ 8. Check that you have 1 file and 1 folder to add when you are in main branch, these are the same files that you added when your HEAD was in your branch, do you know why they show up here? 
 
 ## Fast forward merge
 
@@ -181,13 +194,13 @@
      ```bash
     git merge admin-br
     ```
-    ❓ Do you know fast forward means in this case?  
+    ❓9. Do you know fast forward means in this case?  
 
     - Inspect what is left to be added: 
     ```bash
     git status
     ```
-    ❓ Why the file and folder that was shown in step 16 are not there anymore? 
+    ❓10. Why the file and folder that was shown in step 16 are not there anymore? 
 
 18. **Push merged changes to remote:**
     ```bash
@@ -211,21 +224,22 @@
     ```bash
     git status
     ```
-    ❓ Check if you have 1 file to add when you are in main branch. This is the same files that you added when your head was in your branch. Do you know why this end up here? 
+    ❓11. Check if you have 1 file to add when you are in main branch. This is the same files that you added when your HEAD was in your branch. Do you know why this end up here? 
     
-    ❓ By the way, the folder that you added as 'raw-data' does not show up here, do you know why?  
+    ❓12. By the way, the folder that you added as 'raw-data' does not show up here, do you know why?  
 
 21. **Merge collab-br into main:**
     ```bash
     git merge collab-br
     ```
-    ❓ Why do you have conflict even if you worked in separate branches? 
+    ❓13. Why do you have conflict even if you worked in separate branches? What is the point with branches if you get the merge conflict when you merge to main anyway? 
+
     - Resolve conflicts in your code editor and save.
     - Inspect what is left to be added: 
     ```bash
     git status
     ```
-    ❓ Why the file that was shown in step 20 is not there anymore? 
+    ❓14. Why the file that was shown in step 20 is not there anymore? 
 
 22. **Commit, and push:**
     ```bash
@@ -283,7 +297,7 @@
     git commit -m "merge commit 2 to main by collaborator"
     git push 
     ```
-    ❓ Check the content of the main, Do you see the critical sentence that was added in step 24?   
-    ❓ Do you have any idea how to avoid such critical mistakes? 
+    ❓ 15. Check the content of the main, Do you see the critical sentence that was added in step 24?   
+    ❓ 16. Do you have any idea how to avoid such critical mistakes? 
 ### [Back to first page](./README.md)
 
