@@ -148,7 +148,7 @@
     git status
     ```
 
-    ❓ 2. Do you know what "your branch" and "origin/main" are referring to in the git status response? 
+    ❓2. Do you know what "your branch" and "origin/main" are referring to in the git status response? 
 
 12. **Refresh GitHub to confirm changes.**
 
@@ -164,7 +164,7 @@
     git pull origin main
     git status
     ```
-    ❓ 3. What is the difference between fetch and pull? 
+    ❓3. What is the difference between fetch and pull? 
 
 14. **Check Commit Logs:**
     ```bash
@@ -189,7 +189,7 @@
     - Using IDE edit README to add: “Input from local repo to be pushed to remote repo using RStudio/VS code.”
     - Commit message: “Commit from IDE”
     - Add, commit, and push changes using the IDE.
-    - Check the Git Graph 
+    - Check the Git Graph (Git Graph is an extension that you can install on your vscode)
     - Check the README content in the dual view
 
 18. **Edit on GitHub and pull changes using IDE:**
@@ -198,7 +198,7 @@
     - Commit message: “Editing from GitHub”
     - Fetch and pull the latest changes from GitHub using the IDE 
 
-    ❓ 4. Can you fetch only using RStudio's Git interface? 
+    ❓4. Can you fetch only using RStudio's Git interface? 
 
 19. **Review commit history in IDE:**
     - In RSTudio: use git history 
@@ -259,9 +259,9 @@
      ```bash
     git log --oneline
     ```
-    ❓ 9. Has the last commit disappeared? 
+    ❓9. Has the last commit disappeared? 
 
-    ❓ 10. Check the content of the README file, has the content changed as a result of last operation?  
+    ❓10. Check the content of the README file, has the content changed as a result of last operation?  
 
 
 24. **Commit to be reversed:**
@@ -270,7 +270,7 @@
     git status
     ```
 
-    ❓ 11. You see uncommitted changes, can you verify what changes are to be committed? Aren't these the changes that were left as a result of the previous uncommit action? 
+    ❓11. You see uncommitted changes, can you verify what changes are to be committed? Aren't these the changes that were left as a result of the previous uncommit action? 
 
     - commit: 
     ```bash

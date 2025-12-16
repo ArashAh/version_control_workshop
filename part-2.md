@@ -20,15 +20,18 @@
 
 
 1. **Create a local demo project:**
-   - Make a directory for a demo project on your local machine and initialize a local repo, this directory should be different than the one you used for part 1:
+   - Make a directory for a demo project on your local machine and initialize a local repo, **this directory should be different than the one you used for part 1**:
    ```bash
-   cd <into the folder that to place the workshop material>
-   mkdir vc-demo-local
-   cd vc-demo-local
+   cd <into the folder that you want to place the workshop material in>
+   mkdir vc-demo-collab
+   cd vc-demo-collab
    git status 
    git init 
    git status 
    ```
+
+    ❓1. What is the difference between the git status output before and after git init?  
+
 
 2. **Create `demo.txt` and make initial commit:**
    - Generate a text file and name it “demo.txt”:
@@ -41,18 +44,21 @@
    git add . 
    git commit -m "commit 1 to master by admin"
    ```
+    
+
 
 ## Create a remote repository and connect
 
 3. **Create a repo On GitHub:**
-   - Create a private repo named “vc-demo” without README.
+   - Create a **private** repo named “vc-demo-collab” **without README**.
 
+    ❓2. What is the difference between this approach for initiating a repo and the one we did in part 1? 
 4. **Rename branch:**
    - Rename the branch from master to main:
     ```bash
     git branch -M main
     ```
-    ❓ do you know why we need to do this? 
+    ❓3. Why do we need to do this? 
 
 5. **Connect local to remote:**
    - Add a remote repository:
@@ -61,6 +67,8 @@
    git remote add origin <https of repo on github>
    git remote show origin
    ```
+    ❓ 4. Do you see the fetch and push URL there? 
+    ❓ 5. Can you see the connection between remote and local branch? 
 
 6. **Push to remote and set tracking:**
    - Push the first commit:
@@ -68,7 +76,7 @@
    git status
    git push 
    ```
-   ❓ You see an error, do you know why this happens and how to fix it? 
+   ❓6. You see an error, do you know why this happens? Follow along to fix it. 
    
    - Push with setting the upstream 
     ```Bash 
@@ -76,6 +84,8 @@
      git status 
      git remote show origin
      ```
+    
+    ❓7. Compare the output of this step with output of step 5, what is the difference? 
 
 7. **Add collaborator:**
    - Go to `settings > collaborators` and add a collaborator to the project.
@@ -107,8 +117,11 @@
      ```bash
      git push 
      ```
-    ❓ This time with pushing you did not get the same error as the admin did, do you know why? 
+    ❓8. This time with pushing you did not get the same error as the admin did, do you know why? Run the following command and compare the output with step 5, this might give you a clue. 
 
+     ```bash
+     git remote show origin
+     ```
 ## Admin
 
 11. **Pull Latest Changes:**
@@ -136,7 +149,7 @@
 
 
 14. **Create Conflict:**
-    - Collaborator does not pull before applying changes
+    - **Collaborator does not pull before applying changes**
     - Open `demo.txt` and add: “Input 2 to main branch by collaborator”, save the file.
     - Add and commit:
     ```bash
@@ -150,7 +163,8 @@
      ```
      - Inspect the error 
     
-    ❓ Do you know why you cannot push? 
+    ❓9. Why can't we push?
+
 16. **Pull the divergence:**
     - Push fails, so fetch and pull changes:
     ```bash
@@ -158,18 +172,22 @@
     git status 
     git pull 
     ```
-    ❓ You get a merge conflict? Do you know why? Why is it a merge? 
+    ❓10. Did you get a merge conflict? Why? 
 
-    - If instead of merge conflict you got the config options you are using a newer version of git that safeguards the local branch. You need to select the option that avoids rebase, ask for help if not sure. 
+    - If instead of merge conflict you got the config options you are using a newer version of git that safeguards the local branch. You need to select the option that avoids rebase (git config pull.rebase false), ask for help if not sure. 
+
+    ❓11. Why is it called a merge? 
 
 17. **Resolve Conflict:**
-    - Resolve in RStudio or VS Code. It means select which version to stay (keep both changes) in the file and save it. 
+    - Resolve in RStudio or VS Code. It means select which version to stay (keep both changes) in the file and save it. Ask for help if you are in doubt. 
+    - in VS Code avoid pressing the "Resolve in Merge Editor" button, at this point inline comparison is enough. 
+
     - Add file and commit:
     ```bash
     git add . 
     git commit -m "commit 3 to main by collaborator, conflict resolved"
     ```
-    ❓ Do you know why you needed to commit again?
+    ❓12. Do you know why you needed to commit again?
 
 18. **Push Resolved Conflicts:**
     ```bash
@@ -199,16 +217,17 @@
     git checkout <commit hash>
     git log --oneline --all 
     ```
-    ❓ Do you see the detached head in the log and git graph?
+    ❓13. Do you see the detached head in the log and git graph?
     
-    ❓ Can you verify if the content of the file is according to the corresponding commit? 
+    ❓14. Can you verify if the content of the demo.txt is according to the corresponding commit? 
 
 21. **Return to Main without change:**
     - If you want to go back to main without any commit or change simply attach the head back and switch to main:
     ```bash
-    git switch - 
+    git switch - # if this does not work, run git switch main 
     git log --oneline --all
     ```
+    ❓15. Did your checkout leave an trace? Did it change anything? 
 
 22. **Create a Branch from the detached head state:**
     - Repeat step 20, now we want to make new branch from there 
@@ -219,13 +238,14 @@
     Open `demo.txt` and add: “Input to test-bar branch by admin from detached head state”, save the file.
     
     ```bash
-    git commit -a -m "commit from the detached head state"
+    git commit -a -m "commit from the detached head state" # add and commit with one command
     ```
-    ❓ Can you imagine a scenario where this functionality can be useful? 
+    ❓16. Can you imagine a scenario where this functionality can be useful? 
 23. **Switch Back to Main Branch:**
     ```bash
     git switch main 
     ```
+    ❓17. Compare with step 21, did your checkout leave an trace? Did it change anything? 
 
 
 ### [Back to first page](./README.md)
