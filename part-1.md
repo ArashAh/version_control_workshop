@@ -206,7 +206,22 @@
 
 ## Going back to history
 
-20. **Commit to be amended** 
+20. **Restore uncommitted changes (single file, then entire repo)**
+
+    - Add another line to README file: “Input from local repo that is not going to be committed, and it is going to be discarded.”
+    - Verify Git sees the change:
+    ```bash
+    git status
+    ```
+
+    - Restore a single file back to the last commit:
+    ```bash
+    git restore README.md
+    ```
+
+    - You can use `git restore .` to restore the entire repo to its last commit state (HEAD) 
+
+21. **Commit to be amended** 
 
     - Add another line to README file: “Input from local repo to be amended, the content is the same, only commit message is amended.”
     - Commit with:
@@ -219,7 +234,7 @@
     ```
 
 
-21. **Amend a Commit:**
+22. **Amend a Commit:**
     ```bash
     git commit --amend 
     ```
@@ -239,7 +254,7 @@
     ❓8. What is the difference between git push --force and git push --force-with-lease? 
 
 
-22. **Commit to be uncommitted** 
+23. **Commit to be uncommitted** 
 
     - Add another line to README file: “Input from local repo to be committed and uncommitted, the content is the same, only the commit is reversed.”
     - Commit with:
@@ -251,7 +266,7 @@
     git log --oneline
     ```
 
-23. **Un-commit a Commit:**
+24. **Un-commit a Commit:**
     ```bash
     git reset HEAD~1
     ```
@@ -263,14 +278,16 @@
 
     ❓10. Check the content of the README file, has the content changed as a result of last operation?  
 
+    - You can use  `git reset HEAD~1 aSingleFile.txt` to reset a single file. 
 
-24. **Commit to be reversed:**
+
+25. **Commit to be reversed:**
     - Look at the Git status    
     ```bash
     git status
     ```
 
-    ❓11. You see uncommitted changes, can you verify what changes are to be committed? Aren't these the changes that were left as a result of the previous uncommit action? 
+    ❓11. You see uncommitted changes, can you verify what changes are to be committed? Aren't these the changes that were left as a result of the previous uncommit action (step 24)? 
 
     - commit: 
     ```bash
@@ -281,7 +298,7 @@
     git log --oneline
     ```
 
-25. **Reverse a commit:**
+26. **Reverse a commit:**
     - Now, we want to reverse the commit and the content. 
 
     ```bash
@@ -294,7 +311,7 @@
     ❓12. Has the last commit disappeared? 
 
 
-    ❓13. Check the content of the README file, can you explain what happened to the latest changes you committed in step 23? 
+    ❓13. Check the content of the README file, can you explain what happened to the latest changes you committed in step 25? 
 
 
     ❓14. What happens if you already have pushed the commit?
@@ -304,7 +321,7 @@
 
 
 
-26. **Commit to be reverted:**
+27. **Commit to be reverted:**
     
     - Add another line to the README file: “Input from local repo to be reverted. The content will be gone but the commit stays in the history”
     - Commit with:
@@ -316,7 +333,7 @@
     git log --oneline
     ```
 
-27. **Revert a Commit:**
+28. **Revert a Commit:**
     - Copy the commit hash of the commit you want to revert from previous step
     - Revert by running this and pasting the commit hash: 
     ```bash
@@ -324,7 +341,7 @@
     ```
     - This will be a new commit, save and close the commit prompt to complete the revert.
 
-28. **Verify the revert** 
+29. **Verify the revert** 
     - Look at the commit log 
      ```bash
     git log --oneline
@@ -333,9 +350,9 @@
     ❓16. Has the last commit disappeared? 
 
 
-    ❓17. Check the content of the README file, can you explain what happened to the latest changes you committed in step 26? 
+    ❓17. Check the content of the README file, can you explain what happened to the latest changes you committed in step 27? 
   
-29. **Reflect**
+30. **Reflect**
 
     ❓18. Can you imagine different scenarios where "amend", "un-commit", "reverse" or "revert" can be used? 
 
