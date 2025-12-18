@@ -6,7 +6,7 @@
   - [Introduce yourself to Git](#introduce-yourself-to-git)
   - [Establish the Git-GitHub connection - Clone](#establish-the-git-github-connection---clone)
   - [Commit / Push / Pull](#commit--push--pull)
-    - [Use RStudio / VS Code / any other IDE](#use-rstudio--vs-code--any-other-ide)
+  - [Use RStudio / VS Code / any other IDE](#use-rstudio--vs-code--any-other-ide)
   - [Going back to history](#going-back-to-history)
 
 ---
