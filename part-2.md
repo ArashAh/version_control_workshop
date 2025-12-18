@@ -68,6 +68,7 @@
    git remote show origin
    ```
      ❓4. Do you see the fetch and push URL there? 
+
      ❓5. Can you see the connection between remote and local branch? 
 
 6. **Push to remote and set tracking:**
@@ -97,7 +98,10 @@
 
 
 8. **Clone the repo:**
-    - Find the repository created by the admin in your repository list, clone it, and `cd` into the cloned directory:
+    - Go to the notification center on your GitHub account (top-right).
+    - Click on the invitation to open it and then accept it.
+    - Go to HOME on your GitHub account, find the repository created by the admin in your repository list on the left panel 
+    - clone the repository, and `cd` into its directory:
      ```bash
      git clone <https of repo on github> 
      cd <into the folder that was created by clone>
@@ -132,10 +136,10 @@
 12. **Edit and Commit:**
     - Open `demo.txt` and add: "Input 2 to main branch by admin", then save the file.
     - Add and commit:
-      ```bash
-      git add . 
-      git commit -m "commit 2 to main by admin"
-      ```
+    ```bash
+    git add . 
+    git commit -m "commit 2 to main by admin"
+    ```
 
 13. **Push Changes:**
     ```bash

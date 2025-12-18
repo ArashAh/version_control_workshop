@@ -68,8 +68,8 @@
 
    - On GitHub, navigate to `GitHub > Settings > Developer Settings > Personal access tokens > Tokens (classic) > Generate new token (classic)`.
    - For scopes, select at least:
-    - `repo`
-    - (optional) `workflow` (only if you will push changes to workflow files and you plan to use GitHub action)
+       - `repo`
+       - (optional) `workflow` (only if you will push changes to workflow files and you plan to use GitHub action)
       
    - Generate a new PAT, copy, and paste it somewhere safe. You will not be able to see this after you refresh the page. 
 
@@ -205,7 +205,7 @@
 
 ## Going back to history
 
-20. **Restore uncommitted changes (single file, then entire repo)**
+20. **Restore previous versions (single file, then entire repo)**
 
     - Add another line to `README.md`: "Input from local repository that is not going to be committed, and it is going to be discarded."
     - Verify Git sees the change:
@@ -218,11 +218,20 @@
     git diff
     ```
 
-    - Restore a single file back to the last commit:
+    - Restore a single file back to the last commit (reverse the latest uncommitted changes):
     ```bash
     git restore README.md
     ```
 
+    - Restore a single file to its state in any commit in the past: 
+    - keep track of the last sentence in the `README.md` file. 
+
+    ```bash 
+    git restore --source=HEAD~1 README.md
+    ```
+
+    - Check the `README.md` file and see the last sentence is discarded or not. 
+    - Add another line to `README.md`: "Input from local repository that is not going to be committed, and it is going to be discarded this time with the entire working tree".
     - Restore the entire working tree back to its last commit state (HEAD):
     ```bash
     git restore .
@@ -284,11 +293,6 @@
     ❓9. Has the last commit disappeared? 
 
     ❓10. Check the content of the README file, has the content changed as a result of last operation?  
-
-    - If you want to unstage a single file (without changing commits), you can also use:
-    ```bash
-    git restore --staged aSingleFile.txt
-    ```
 
 
 25. **Commit to be reversed:**
