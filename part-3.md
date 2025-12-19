@@ -80,7 +80,7 @@
    git push
    ```
 
-   ❓3. You get an error, why? Run the following command, it might give you some clue: 
+   ❓3. You get an error, why? Compare the result of `git branch` and `git branch -r` or run the following command, it might give you some clue: 
 
    ```bash
    git remote show origin

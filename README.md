@@ -15,7 +15,7 @@ If you have any questions, feel free to reach out to us at: contact@dscience.uio
   - Introduce yourself to git
   - Establish the Git-GitHub Connection - Clone
   - Commit / Push / Pull
-  - Use RStudio, VS Code or any other IDE
+  - Use RStudio / VS Code / any other IDE
   - Going back to history
 - [Part 2: Single-branch collaborative development ](./part-2.md)
   - Initiate a project from Git
@@ -33,6 +33,7 @@ If you have any questions, feel free to reach out to us at: contact@dscience.uio
 - [Part 4: Multi-branch collaborative development, best practices ](./part-4.md) 
   - Stash-checkout-switch-pop
   - Merge from MAIN - merge back to MAIN
+  - Merge from MAIN - pull request
   - Rebase from MAIN - pull request
   - Pull request - without conflicts resolved
-  - Merge to MAIN without pull request
+  
