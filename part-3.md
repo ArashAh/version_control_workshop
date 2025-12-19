@@ -20,7 +20,7 @@
 
 1. **Ensure latest version of remote repo:**
     
-    Here is the continuation of the part-2, if you are joining in the workshop at this point, go to part-2 and perform step 1-10 and come back here. 
+    This is the continuation of Part 2. If you are joining the workshop at this point, go to Part 2 and perform steps 1-10, then come back here.
    ```bash
    git fetch 
    git status 
@@ -35,10 +35,10 @@
 
 3. **Create new files and folders:**
    ```bash
-   touch admin-test.txt
+   touch admin-test.txt # Windows PowerShell alternative: New-Item admin-test.txt
    mkdir raw-data
    cd raw-data
-   touch admin-data.txt
+   touch admin-data.txt # Windows PowerShell alternative: New-Item admin-data.txt
    cd ..
    git status
    ```
@@ -46,19 +46,19 @@
 ## Create .gitignore
 
 4. **Generate and update .gitignore:**
-    - These files and folders you added are some experimentation and raw data and you don't need to include them in your Git history, so we want to ignore them. 
+    - Assume these files and folders you added here, are some experimentation and raw data and you don't want to include them in your Git history, so we want to ignore them. 
    ```bash
    touch .gitignore 
    echo "admin-test.txt" >> .gitignore
    echo "raw-data/" >> .gitignore
    git status 
    ```
-   ❓1. Compare the result of git status with the one in step 3, what is the difference? 
+   ❓1. Compare the result of `git status` with the one in step 3. What is the difference?
 
-   ❓2. Can you think of potential things to ignore in a repo? 
+   ❓2. Can you think of potential things to ignore in a repository?
 
 5. **Update and commit while ignoring:**
-   - Open `demo.txt` and add this sentence: “Input 1 to admin-br by admin”
+   - Open `demo.txt` and add this sentence: "Input 1 to admin-br by admin"
    - Add and commit:
    ```bash
    git add . 
@@ -67,7 +67,7 @@
 
 6. **Continue updating:**
    - You continue your work and track your version in your branch. 
-   - Open `demo.txt` and add this sentence: “Input 2 to admin-br by admin”.
+   - Open `demo.txt` and add this sentence: "Input 2 to admin-br by admin".
    - Add and commit in one command:
    ```bash
    git commit -a -m "commit 2 to admin-br by admin"
@@ -88,7 +88,7 @@
    
    - To fix the error, push with setting an upstream:  
 
-   ```Bash
+    ```bash
    git push -u origin admin-br # Set upstream
    git branch -r
    ```
@@ -117,10 +117,10 @@
 10. **Create new files and folders:**
 
     ```bash
-    touch collab-test.txt
+    touch collab-test.txt # Windows PowerShell alternative: New-Item collab-test.txt
     mkdir raw-data
     cd raw-data
-    touch collab-data.txt
+    touch collab-data.txt # Windows PowerShell alternative: New-Item collab-data.txt
     cd ..
     git status
     ```
@@ -138,7 +138,7 @@
     ❓5. Compare the result of git status with the one in step 10, what is the difference? 
 
 12. **Update and Commit:**
-    - Open `demo.txt` and add this sentence: “Input 1 to collab-br by collaborator”
+    - Open `demo.txt` and add this sentence: "Input 1 to collab-br by collaborator"
     - Add and commit:
     ```bash
     git add . 
@@ -147,14 +147,14 @@
 
 13. **Continue Updating:**
      - You continue your work and track your version in your branch. 
-     - Open `demo.txt` and add this sentence: “Input 2 to collab-br by collaborator”.
+     - Open `demo.txt` and add this sentence: "Input 2 to collab-br by collaborator".
      - Add and commit in one command:
       ```bash
       git commit -a -m "Commit 2 to collab-br by collaborator"
       ```
       
 14. **Push Changes to Remote:**
-    ```Bash
+    ```bash
     git branch
     git branch -r
     git push
@@ -162,7 +162,7 @@
     ❓6. You get an error, do you know why? This is similar to step 7, if you still struggle with it, ask for help. 
 
     - Push with setting an upstream:  
-     ```Bash
+     ```bash
      git push -u origin collab-br # Set upstream
      ```
     ❓7. What is the difference of this approach with part 2? Why can we push without merge conflict? 
@@ -184,7 +184,7 @@
     ```bash
     git status
     ```
-    ❓ 8. Check that you have 1 file and 1 folder to add when you are in main branch, these are the same files that you added when your HEAD was in your branch, do you know why they show up here? 
+    ❓8. Check that you have 1 file and 1 folder to add when you are on the main branch. These are the same files that you added when your HEAD was in your branch. Do you know why they show up here?
 
 ## Fast forward merge
 
@@ -194,13 +194,13 @@
      ```bash
     git merge admin-br
     ```
-    ❓9. Do you know fast forward means in this case?  
+    ❓9. Do you know what fast-forward means in this case?
 
     - Inspect what is left to be added: 
     ```bash
     git status
     ```
-    ❓10. Why the file and folder that was shown in step 16 are not there anymore? 
+    ❓10. Why are the file and folder shown in step 16 not there anymore?
 
 18. **Push merged changes to remote:**
     ```bash
@@ -224,22 +224,22 @@
     ```bash
     git status
     ```
-    ❓11. Check if you have 1 file to add when you are in main branch. This is the same files that you added when your HEAD was in your branch. Do you know why this end up here? 
+    ❓11. Check if you have 1 file to add when you are on the main branch. This is the same file that you added when your HEAD was in your branch. Do you know why this ends up here?
     
-    ❓12. By the way, the folder that you added as 'raw-data' does not show up here, do you know why?  
+    ❓12. The folder you added as `raw-data/` does not show up here. Do you know why?
 
 21. **Merge collab-br into main:**
     ```bash
     git merge collab-br
     ```
-    ❓13. Why do you have conflict even if you worked in separate branches? What is the point with branches if you get the merge conflict when you merge to main anyway? 
+    ❓13. Why do you have a conflict even if you worked in separate branches? What is the point of branches if you get a merge conflict when you merge to main anyway?
 
     - Resolve conflicts in your code editor and save.
     - Inspect what is left to be added: 
     ```bash
     git status
     ```
-    ❓14. Why the file that was shown in step 20 is not there anymore? 
+    ❓14. Why is the file shown in step 20 not there anymore?
 
 22. **Commit, and push:**
     ```bash
@@ -256,7 +256,7 @@
     git pull
     ```
 24. **Update, commit and push to main branch:** 
-    - Open `demo.txt` and add this sentence: “Input 3 to main by admin - this is a critical point, but it is going to be overwritten by collaborator by merging to main”
+    - Open `demo.txt` and add this sentence: "Input 3 to main by admin - this is a critical point, but it is going to be overwritten by collaborator by merging to main"
     - Add and commit:
     ```bash
     git add . 
@@ -266,11 +266,11 @@
 
 ## Collaborator 
 
-25. **Switch to collbar-br, Update, Commit and push:**
+25. **Switch to collab-br, Update, Commit and push:**
     ```bash
     git switch collab-br
     ```
-    - Open `demo.txt` and add this sentence: “Input 3 to collab-br by collaborator - this is going to mess with the main branch”
+    - Open `demo.txt` and add this sentence: "Input 3 to collab-br by collaborator - this is going to mess with the main branch"
 
     - Add and commit:
     ```bash
@@ -297,7 +297,8 @@
     git commit -m "merge commit 2 to main by collaborator"
     git push 
     ```
-    ❓ 15. Check the content of the main, Do you see the critical sentence that was added in step 24?   
-    ❓ 16. Do you have any idea how to avoid such critical mistakes? 
+    ❓15. Check the content of main. Do you see the critical sentence that was added in step 24?
+    
+    ❓16. Do you have any idea how to avoid such critical mistakes?
 ### [Back to first page](./README.md)
 
